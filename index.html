@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PeelAways® — Disposable Fitted Sheets. Peel. Toss. Sleep.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    * { font-family: 'Inter', sans-serif; }
+
+    /* ---- Brand tokens ---- */
+    :root {
+      --navy: #0F2D5E;
+      --blue: #1E6EC8;
+      --sky:  #4FA3E8;
+      --pale: #E6F3FD;
+    }
+
+    /* ---- Gradient text ---- */
+    .gt {
+      background: linear-gradient(135deg, #0F2D5E 0%, #1E6EC8 55%, #4FA3E8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ---- Mascot float ---- */
+    @keyframes mascot-float {
+      0%,100% { transform: translateY(0) rotate(-1.5deg); }
+      50%      { transform: translateY(-14px) rotate(1.5deg); }
+    }
+    .mascot { animation: mascot-float 3.2s ease-in-out infinite; }
+
+    /* ---- Peel layer hover ---- */
+    .peel-layer {
+      transition: transform .45s cubic-bezier(.22,.87,.37,1.25), opacity .4s ease;
+      cursor: pointer;
+      position: relative;
+    }
+    .peel-layer::after {
+      content: 'peel me →';
+      position: absolute;
+      right: 16px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 11px; font-weight: 700;
+      color: var(--blue); opacity: 0;
+      transition: opacity .3s;
+      pointer-events: none;
+    }
+    .peel-layer:hover::after { opacity: 1; }
+    .peel-layer:hover { transform: translateX(12px) rotate(-1deg); box-shadow: 0 8px 28px rgba(30,110,200,.18); }
+    .peel-layer.gone {
+      transform: translateX(260px) rotate(-18deg) !important;
+      opacity: 0 !important;
+      pointer-events: none;
+    }
+
+    /* ---- Ticker ---- */
+    @keyframes tick { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+    .ticker-inner { animation: tick 22s linear infinite; white-space: nowrap; }
+
+    /* ---- Scroll fade-up ---- */
+    .fu { opacity:0; transform:translateY(28px); transition: opacity .6s ease, transform .6s ease; }
+    .fu.on { opacity:1; transform:none; }
+
+    /* ---- Scenario card hover ---- */
+    .sc { transition: transform .22s ease, box-shadow .22s ease; }
+    .sc:hover { transform:translateY(-7px) scale(1.02); box-shadow: 0 22px 44px rgba(15,45,94,.13); }
+
+    /* ---- Step connector ---- */
+    .step-dot { width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.85rem; color:white; flex-shrink:0; }
+
+    /* ---- Mess-o-meter ---- */
+    @keyframes fill-bar { from{width:0} to{width:var(--pct)} }
+    .fill-bar { animation: fill-bar 1.4s ease-out forwards; width:0; }
+
+    /* ---- Stars ---- */
+    .stars { color:#F59E0B; }
+
+    /* ---- CTA pulse ---- */
+    @keyframes soft-pulse {
+      0%,100% { box-shadow: 0 8px 30px rgba(30,110,200,.4); }
+      50%      { box-shadow: 0 8px 50px rgba(30,110,200,.6), 0 0 0 8px rgba(30,110,200,.08); }
+    }
+    .cta-pulse { animation: soft-pulse 2.4s ease-in-out infinite; }
+
+    /* ---- Confetti burst ---- */
+    .confetti-particle {
+      position: absolute;
+      width: 8px; height: 8px;
+      border-radius: 2px;
+      animation: confetti-fly var(--dur) ease-out forwards;
+      pointer-events: none;
+    }
+    @keyframes confetti-fly {
+      0%   { transform: translate(0,0) rotate(0deg); opacity:1; }
+      100% { transform: translate(var(--tx),var(--ty)) rotate(var(--rot)); opacity:0; }
+    }
+
+    /* ---- Rotating shimmer on hero bg ---- */
+    @keyframes rot { to { transform: rotate(360deg); } }
+    .spin-bg { animation: rot 30s linear infinite; }
+
+    /* ---- Layer stack widget ---- */
+    .layer-item { border-radius:12px; border:2px solid rgba(255,255,255,.7); transition:all .3s ease; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+<!-- ======= ANNOUNCEMENT BAR ======= -->
+<div class="text-center text-sm font-bold py-2.5 text-white"
+  style="background:linear-gradient(90deg,#0F2D5E,#1E6EC8,#4FA3E8,#1E6EC8,#0F2D5E); background-size:300% auto; animation: tick 6s linear infinite;">
+  🎉 FREE SHIPPING on orders $50+ &nbsp;·&nbsp; 🛏️ 5 Fresh Layers Per Set &nbsp;·&nbsp; ⭐ 12,000+ Five-Star Reviews
+</div>
+
+<!-- ======= NAV ======= -->
+<nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-2">
+      <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+        <rect x="2" y="8" width="24" height="14" rx="3" fill="#4FA3E8" opacity=".45"/>
+        <rect x="2" y="5" width="24" height="14" rx="3" fill="#1E6EC8" opacity=".65"/>
+        <rect x="2" y="2" width="24" height="14" rx="3" fill="#0F2D5E"/>
+      </svg>
+      <span class="text-xl font-black tracking-tight text-gray-900">
+        Peel<span style="color:#1E6EC8">Aways</span><sup class="text-xs font-bold text-gray-400">®</sup>
+      </span>
+    </a>
+    <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-gray-600">
+      <a href="#how" class="hover:text-blue-600 transition-colors">How It Works</a>
+      <a href="#mess" class="hover:text-blue-600 transition-colors">The Mess Test</a>
+      <a href="#uses" class="hover:text-blue-600 transition-colors">Who It's For</a>
+      <a href="#reviews" class="hover:text-blue-600 transition-colors">Reviews</a>
+    </div>
+    <a href="https://peelaways.com" target="_blank"
+      class="cta-pulse px-5 py-2.5 rounded-full text-sm font-bold text-white transition-all hover:scale-105"
+      style="background:linear-gradient(135deg,#0F2D5E,#1E6EC8)">
+      Shop Now →
+    </a>
+  </div>
+</nav>
+
+<!-- ======= HERO ======= -->
+<section class="relative overflow-hidden" style="background:linear-gradient(150deg,#EBF5FF 0%,#DBEAFE 40%,#C3DFFB 100%)">
+
+  <!-- Rotating blob bg -->
+  <div class="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden opacity-20">
+    <div class="spin-bg w-[800px] h-[800px] rounded-full"
+      style="background:radial-gradient(circle at 40% 40%, #1E6EC8, transparent 60%), radial-gradient(circle at 70% 70%, #4FA3E8, transparent 50%)">
+    </div>
+  </div>
+
+  <div class="relative max-w-6xl mx-auto px-6 pt-16 pb-6 md:pt-24 md:pb-10 grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- Left -->
+    <div class="fu">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold mb-6"
+        style="background:rgba(30,110,200,.1);color:#0F2D5E">
+        🛏️ &nbsp;5 Fresh Layers. Zero Wrestling.
+      </div>
+      <h1 class="text-5xl md:text-[3.6rem] font-black leading-[1.04] mb-5">
+        <span class="gt">Stop Fighting</span><br/>Your Fitted Sheets.
+      </h1>
+      <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-md">
+        PeelAways are disposable fitted sheets with <strong>5 layers stacked in one</strong>.
+        Life's messy — so we made clean-up feel like a magic trick.
+      </p>
+
+      <!-- CTA row -->
+      <div class="flex flex-wrap gap-4 items-center mb-8">
+        <a href="https://peelaways.com" target="_blank" id="hero-cta"
+          class="cta-pulse relative overflow-hidden px-8 py-4 rounded-full text-lg font-black text-white transition-all hover:scale-105"
+          style="background:linear-gradient(135deg,#0F2D5E,#1E6EC8)">
+          <span class="relative z-10">Shop PeelAways →</span>
+        </a>
+        <a href="#how" class="text-blue-700 font-semibold hover:underline text-sm flex items-center gap-1">
+          See how it works <span>↓</span>
+        </a>
+      </div>
+
+      <!-- Micro badges -->
+      <div class="flex flex-wrap gap-2.5">
+        <span class="px-3 py-1.5 bg-white rounded-full text-xs font-semibold text-gray-700 shadow-sm border border-gray-100">⚡ Change in Seconds</span>
+        <span class="px-3 py-1.5 bg-white rounded-full text-xs font-semibold text-gray-700 shadow-sm border border-gray-100">💧 Leak Protection</span>
+        <span class="px-3 py-1.5 bg-white rounded-full text-xs font-semibold text-gray-700 shadow-sm border border-gray-100">🔁 5 Layers Per Set</span>
+        <span class="px-3 py-1.5 bg-white rounded-full text-xs font-semibold text-gray-700 shadow-sm border border-gray-100">⭐ 4.8 / 5 (12k reviews)</span>
+      </div>
+    </div>
+
+    <!-- Right: Mascot + interactive layer stack -->
+    <div class="flex flex-col items-center gap-6">
+
+      <!-- CSS Mascot character -->
+      <div class="mascot select-none relative">
+        <div class="relative mx-auto" style="width:160px">
+          <!-- Body (the sheet) -->
+          <div class="w-40 h-40 bg-white rounded-[22px] shadow-2xl border-4 mx-auto flex items-center justify-center relative"
+            style="border-color:#BFDBFE; box-shadow:0 24px 60px rgba(30,110,200,.22)">
+            <!-- Eyebrows -->
+            <div class="absolute flex gap-6" style="top:28px">
+              <div class="w-6 h-1.5 rounded-full bg-gray-700" style="transform:rotate(-8deg)"></div>
+              <div class="w-6 h-1.5 rounded-full bg-gray-700" style="transform:rotate(8deg)"></div>
+            </div>
+            <!-- Eyes -->
+            <div class="absolute flex gap-5" style="top:40px">
+              <div class="w-6 h-7 bg-gray-900 rounded-full relative">
+                <div class="absolute top-1.5 right-1 w-2 h-2 bg-white rounded-full"></div>
+              </div>
+              <div class="w-6 h-7 bg-gray-900 rounded-full relative">
+                <div class="absolute top-1.5 right-1 w-2 h-2 bg-white rounded-full"></div>
+              </div>
+            </div>
+            <!-- Smile -->
+            <div class="absolute" style="top:82px;left:50%;transform:translateX(-50%)">
+              <svg width="44" height="24" viewBox="0 0 44 24" fill="none">
+                <path d="M5 6 Q22 22 39 6" stroke="#1a1a1a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <!-- Peel corner -->
+            <div class="absolute bottom-0 right-0 overflow-hidden rounded-br-[18px]" style="width:32px;height:32px">
+              <div style="position:absolute;bottom:0;right:0;width:32px;height:32px;background:linear-gradient(225deg,#BFDBFE 50%,transparent 50%)"></div>
+            </div>
+            <!-- Wave hand -->
+            <div class="absolute text-2xl" style="top:-12px;right:-16px;transform:rotate(20deg);filter:drop-shadow(0 2px 4px rgba(0,0,0,.1))">👆</div>
+          </div>
+          <!-- Arms -->
+          <div class="absolute flex items-end gap-28" style="top:60px;left:50%;transform:translateX(-50%)">
+            <div class="w-3 h-10 rounded-full" style="background:#BFDBFE;transform:rotate(25deg)"></div>
+            <div class="w-3 h-10 rounded-full" style="background:#BFDBFE;transform:rotate(-25deg)"></div>
+          </div>
+          <!-- Legs -->
+          <div class="flex justify-center gap-8 mt-1.5">
+            <div class="w-4 h-10 rounded-full" style="background:#BFDBFE"></div>
+            <div class="w-4 h-10 rounded-full" style="background:#BFDBFE"></div>
+          </div>
+          <!-- Sneakers -->
+          <div class="flex justify-center gap-5 -mt-1">
+            <div class="w-11 h-5 rounded-full shadow-md" style="background:#0F2D5E"></div>
+            <div class="w-11 h-5 rounded-full shadow-md" style="background:#0F2D5E"></div>
+          </div>
+        </div>
+        <p class="text-center text-blue-700 text-sm font-bold mt-3">Click the layers below! 👇</p>
+      </div>
+
+      <!-- Interactive peelable layer stack -->
+      <div id="layer-stack" class="w-72 space-y-1.5">
+        <div class="peel-layer layer-item bg-white flex items-center gap-3 px-5 py-3 shadow-md"
+          onclick="peelIt(this,1)">
+          <span class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black flex-shrink-0" style="background:#0F2D5E">1</span>
+          <span class="font-semibold text-sm text-gray-800">Layer 1 — Fresh &amp; clean ✨</span>
+          <span class="ml-auto text-xs font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded-full">Clean</span>
+        </div>
+        <div class="peel-layer layer-item bg-blue-50 flex items-center gap-3 px-5 py-3 shadow-sm"
+          onclick="peelIt(this,2)">
+          <span class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black flex-shrink-0" style="background:#1E6EC8">2</span>
+          <span class="font-semibold text-sm text-gray-700">Layer 2 — Still clean</span>
+          <span class="ml-auto text-xs font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded-full">Clean</span>
+        </div>
+        <div class="peel-layer layer-item bg-blue-100 flex items-center gap-3 px-5 py-3 shadow-sm"
+          onclick="peelIt(this,3)">
+          <span class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black flex-shrink-0" style="background:#2B7FD4">3</span>
+          <span class="font-semibold text-sm text-gray-700">Layer 3 — Getting there</span>
+          <span class="ml-auto text-xs font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded-full">Clean</span>
+        </div>
+        <div class="peel-layer layer-item bg-blue-200 flex items-center gap-3 px-5 py-3 shadow-sm"
+          onclick="peelIt(this,4)">
+          <span class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black flex-shrink-0" style="background:#3B9AE1">4</span>
+          <span class="font-semibold text-sm text-gray-600">Layer 4 — Almost there</span>
+          <span class="ml-auto text-xs font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded-full">Clean</span>
+        </div>
+        <div class="peel-layer layer-item bg-blue-300 flex items-center gap-3 px-5 py-3 shadow-sm"
+          onclick="peelIt(this,5)">
+          <span class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black flex-shrink-0" style="background:#4FA3E8">5</span>
+          <span class="font-semibold text-sm text-gray-600">Layer 5 — The final frontier</span>
+          <span class="ml-auto text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">Last one</span>
+        </div>
+        <div id="all-peeled" class="hidden text-center py-4 text-blue-700 font-bold text-sm">
+          🎉 All peeled! &nbsp;<button onclick="resetLayers()" class="underline text-blue-600">Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ticker -->
+  <div class="mt-4 overflow-hidden border-t border-blue-100 py-3" style="background:rgba(255,255,255,.65)">
+    <div class="ticker-inner inline-flex gap-10 text-sm font-bold text-blue-900">
+      <span>🛏️ CHANGE IN SECONDS</span><span>·</span>
+      <span>💧 LEAK PROTECTION</span><span>·</span>
+      <span>🐶 PET OWNERS LOVE IT</span><span>·</span>
+      <span>👶 BABY-APPROVED</span><span>·</span>
+      <span>✈️ TRAVELER FAVORITE</span><span>·</span>
+      <span>🤧 SICK DAY SAVIOR</span><span>·</span>
+      <span>⭐ 12K FIVE-STAR REVIEWS</span><span>·</span>
+      <span>🛏️ CHANGE IN SECONDS</span><span>·</span>
+      <span>💧 LEAK PROTECTION</span><span>·</span>
+      <span>🐶 PET OWNERS LOVE IT</span><span>·</span>
+      <span>👶 BABY-APPROVED</span><span>·</span>
+      <span>✈️ TRAVELER FAVORITE</span><span>·</span>
+      <span>🤧 SICK DAY SAVIOR</span><span>·</span>
+      <span>⭐ 12K FIVE-STAR REVIEWS</span><span>·</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======= HONEST PROBLEM ======= -->
+<section class="py-20 bg-white text-center">
+  <div class="max-w-3xl mx-auto px-6 fu">
+    <p class="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-4">
+      When did you last<br/><span class="gt">actually change your sheets?</span>
+    </p>
+    <p class="text-lg text-gray-400 mb-14">No judgment. We've all been there. That's literally why PeelAways exists.</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div class="p-7 rounded-2xl bg-gray-50 border border-gray-100">
+        <p class="text-5xl font-black mb-2" style="color:#0F2D5E">3 min</p>
+        <p class="text-sm text-gray-500 font-medium">Average time wrestling a fitted sheet onto a mattress</p>
+      </div>
+      <div class="p-7 rounded-2xl text-white" style="background:linear-gradient(135deg,#0F2D5E,#1E6EC8)">
+        <p class="text-5xl font-black mb-2">3 sec</p>
+        <p class="text-sm opacity-80 font-medium">Time to peel a PeelAways layer. One. Two. Three. Done.</p>
+      </div>
+      <div class="p-7 rounded-2xl bg-gray-50 border border-gray-100">
+        <p class="text-5xl font-black mb-2" style="color:#0F2D5E">2 am</p>
+        <p class="text-sm text-gray-500 font-medium">The worst possible time to discover your sheets need changing</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= THE MESS-O-METER ======= -->
+<section id="mess" class="py-20" style="background:linear-gradient(160deg,#EBF5FF,#DBEAFE)">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="text-center mb-14 fu">
+      <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Real Talk</span>
+      <h2 class="text-4xl font-black mt-2 text-gray-900">The Official Mess-O-Meter</h2>
+      <p class="text-gray-500 mt-2">Scientifically measured by people who are tired of doing laundry.</p>
+    </div>
+    <div class="bg-white rounded-3xl shadow-xl p-8 space-y-7 fu">
+      <!-- Each scenario bar -->
+      <div class="mess-row">
+        <div class="flex justify-between items-center mb-1.5">
+          <span class="font-bold text-sm text-gray-800">🐶 Dog sleeps in the bed</span>
+          <span class="text-xs font-bold text-blue-600">HIGH MESS</span>
+        </div>
+        <div class="h-4 bg-gray-100 rounded-full overflow-hidden">
+          <div class="fill-bar h-full rounded-full" style="--pct:82%;background:linear-gradient(90deg,#1E6EC8,#4FA3E8)"></div>
+        </div>
+      </div>
+      <div class="mess-row">
+        <div class="flex justify-between items-center mb-1.5">
+          <span class="font-bold text-sm text-gray-800">👶 Potty training toddler</span>
+          <span class="text-xs font-bold text-red-500">CRITICAL</span>
+        </div>
+        <div class="h-4 bg-gray-100 rounded-full overflow-hidden">
+          <div class="fill-bar h-full rounded-full" style="--pct:95%;background:linear-gradient(90deg,#ef4444,#f97316)"></div>
+        </div>
+      </div>
+      <div class="mess-row">
+        <div class="flex justify-between items-center mb-1.5">
+          <span class="font-bold text-sm text-gray-800">☕ Sunday morning coffee in bed</span>
+          <span class="text-xs font-bold text-amber-500">MODERATE</span>
+        </div>
+        <div class="h-4 bg-gray-100 rounded-full overflow-hidden">
+          <div class="fill-bar h-full rounded-full" style="--pct:55%;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></div>
+        </div>
+      </div>
+      <div class="mess-row">
+        <div class="flex justify-between items-center mb-1.5">
+          <span class="font-bold text-sm text-gray-800">🤧 Full flu season survivor</span>
+          <span class="text-xs font-bold text-red-500">CRITICAL</span>
+        </div>
+        <div class="h-4 bg-gray-100 rounded-full overflow-hidden">
+          <div class="fill-bar h-full rounded-full" style="--pct:90%;background:linear-gradient(90deg,#ef4444,#f97316)"></div>
+        </div>
+      </div>
+      <div class="mess-row">
+        <div class="flex justify-between items-center mb-1.5">
+          <span class="font-bold text-sm text-gray-800">🧒 Kids' sleepover (multiple kids)</span>
+          <span class="text-xs font-bold text-red-500">BIBLICAL</span>
+        </div>
+        <div class="h-4 bg-gray-100 rounded-full overflow-hidden">
+          <div class="fill-bar h-full rounded-full" style="--pct:99%;background:linear-gradient(90deg,#7c3aed,#ef4444)"></div>
+        </div>
+      </div>
+      <div class="pt-2 border-t border-gray-100 text-center">
+        <p class="text-sm font-semibold text-gray-500">PeelAways handles all of the above. &nbsp;
+          <a href="https://peelaways.com" target="_blank" class="text-blue-600 font-bold hover:underline">Shop now →</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= HOW IT WORKS ======= -->
+<section id="how" class="py-20 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-16 fu">
+      <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">So Simple It Should Be Illegal</span>
+      <h2 class="text-4xl font-black mt-2 text-gray-900">Three Steps. All of Them Easy.</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="fu text-center" style="transition-delay:.0s">
+        <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg text-5xl bg-white border-2" style="border-color:#BFDBFE">🛏️</div>
+        <div class="step-dot mx-auto mb-3" style="background:#0F2D5E">1</div>
+        <h3 class="text-xl font-black mb-2">Fit It Once</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">Goes on like a normal fitted sheet. All <strong>5 layers</strong> are already stacked and ready. One install, five uses.</p>
+      </div>
+      <div class="fu text-center" style="transition-delay:.15s">
+        <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg text-5xl bg-white border-2" style="border-color:#93C5FD">🫳</div>
+        <div class="step-dot mx-auto mb-3" style="background:#1E6EC8">2</div>
+        <h3 class="text-xl font-black mb-2">Peel the Top</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">Grab the corner tab. Peel the dirty layer clean off. The one underneath is spotless and waiting. Takes about <strong>3 seconds.</strong></p>
+      </div>
+      <div class="fu text-center" style="transition-delay:.3s">
+        <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg text-5xl bg-white border-2" style="border-color:#60A5FA">🗑️</div>
+        <div class="step-dot mx-auto mb-3" style="background:#4FA3E8">3</div>
+        <h3 class="text-xl font-black mb-2">Toss &amp; Sleep</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">Throw it away. Go back to sleep. Repeat up to <strong>5 times</strong> total before swapping the whole set.</p>
+      </div>
+    </div>
+    <div class="text-center mt-14 fu">
+      <div class="inline-flex items-center gap-3 px-7 py-4 rounded-2xl text-lg font-black"
+        style="background:#EBF5FF;color:#0F2D5E;border:2px solid #BFDBFE">
+        Peel. Toss. Back to bed. 😴
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= USE CASES ======= -->
+<section id="uses" class="py-20" style="background:linear-gradient(160deg,#F0F7FF,#DBEAFE)">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-14 fu">
+      <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Life Gets Messy</span>
+      <h2 class="text-4xl font-black mt-2 text-gray-900">Honestly, Who <em>Doesn't</em> Need This?</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div class="sc bg-white p-6 rounded-2xl border-2 border-blue-100 shadow-sm fu">
+        <div class="text-4xl mb-3">👶</div>
+        <h3 class="font-black mb-1 text-gray-900">New Parents</h3>
+        <p class="text-sm text-gray-500">2am blowout? Peel a layer, tuck back in, fall asleep standing up. No laundry at midnight required.</p>
+      </div>
+      <div class="sc bg-white p-6 rounded-2xl border-2 border-amber-100 shadow-sm fu" style="transition-delay:.1s">
+        <div class="text-4xl mb-3">🐶</div>
+        <h3 class="font-black mb-1 text-gray-900">Pet Parents</h3>
+        <p class="text-sm text-gray-500">Muddy paws. "Accidents." The full experience. PeelAways forgives what laundry can't.</p>
+      </div>
+      <div class="sc bg-white p-6 rounded-2xl border-2 border-red-100 shadow-sm fu" style="transition-delay:.2s">
+        <div class="text-4xl mb-3">🤧</div>
+        <h3 class="font-black mb-1 text-gray-900">Sick Days</h3>
+        <p class="text-sm text-gray-500">Night sweats. Spills. Fever chills. The full flu experience. Peel and feel like a person again.</p>
+      </div>
+      <div class="sc bg-white p-6 rounded-2xl border-2 border-green-100 shadow-sm fu" style="transition-delay:.1s">
+        <div class="text-4xl mb-3">✈️</div>
+        <h3 class="font-black mb-1 text-gray-900">Travelers</h3>
+        <p class="text-sm text-gray-500">Hotels. Airbnbs. That friend's spare room. Now you're actually fine with it.</p>
+      </div>
+      <div class="sc bg-white p-6 rounded-2xl border-2 border-indigo-100 shadow-sm fu" style="transition-delay:.2s">
+        <div class="text-4xl mb-3">🎓</div>
+        <h3 class="font-black mb-1 text-gray-900">College Students</h3>
+        <p class="text-sm text-gray-500">Honestly, this is the most realistic sheet change you'll make all semester.</p>
+      </div>
+      <div class="sc bg-white p-6 rounded-2xl border-2 border-pink-100 shadow-sm fu" style="transition-delay:.3s">
+        <div class="text-4xl mb-3">🏥</div>
+        <h3 class="font-black mb-1 text-gray-900">Caregivers</h3>
+        <p class="text-sm text-gray-500">Caring for someone who needs frequent changes. Make a hard job a little easier — and faster.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FEATURES ======= -->
+<section class="py-20" style="background:linear-gradient(150deg,#0F2D5E 0%,#1E6EC8 100%)">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-14 fu">
+      <span class="text-blue-200 font-bold text-xs uppercase tracking-widest">Under the Hood</span>
+      <h2 class="text-4xl font-black mt-2 text-white">Built Different. On Purpose.</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-5">
+      <div class="fu flex gap-5 p-6 rounded-2xl" style="background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.15)">
+        <div class="text-4xl flex-shrink-0">⚡</div>
+        <div>
+          <h3 class="text-xl font-black text-white mb-1.5">Changes in Literal Seconds</h3>
+          <p class="text-blue-100 text-sm leading-relaxed">Corner tab makes peeling effortless. Grab, pull, toss. No fumbling, no wrestling, no midnight cursing.</p>
+        </div>
+      </div>
+      <div class="fu flex gap-5 p-6 rounded-2xl" style="background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.15);transition-delay:.1s">
+        <div class="text-4xl flex-shrink-0">💧</div>
+        <div>
+          <h3 class="text-xl font-black text-white mb-1.5">Leak &amp; Mess Protection</h3>
+          <p class="text-blue-100 text-sm leading-relaxed">Each layer has a moisture-resistant barrier. Spills, sweat, accidents — contained, not transferred.</p>
+        </div>
+      </div>
+      <div class="fu flex gap-5 p-6 rounded-2xl" style="background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.15);transition-delay:.2s">
+        <div class="text-4xl flex-shrink-0">🔢</div>
+        <div>
+          <h3 class="text-xl font-black text-white mb-1.5">5 Layers Per Set</h3>
+          <p class="text-blue-100 text-sm leading-relaxed">Five fresh sheets, one install. 5× less laundry. 5× less wrestling. Significantly more sleep.</p>
+        </div>
+      </div>
+      <div class="fu flex gap-5 p-6 rounded-2xl" style="background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.15);transition-delay:.3s">
+        <div class="text-4xl flex-shrink-0">🛏️</div>
+        <div>
+          <h3 class="text-xl font-black text-white mb-1.5">Fits Like a Real Sheet</h3>
+          <p class="text-blue-100 text-sm leading-relaxed">Deep pockets, secure elastic, soft feel. No sliding, no bunching, no "why won't this corner stay" drama.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-12 fu">
+      <a href="https://peelaways.com" target="_blank"
+        class="inline-block px-10 py-5 rounded-full text-lg font-black text-blue-900 bg-white shadow-2xl transition-all hover:scale-105 hover:shadow-[0_30px_60px_rgba(255,255,255,.25)]">
+        Get PeelAways Now →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= BEFORE / AFTER ======= -->
+<section class="py-20 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-14 fu">
+      <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">The Math</span>
+      <h2 class="text-4xl font-black mt-2 text-gray-900">Without vs. With PeelAways</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-6 fu">
+      <!-- Without -->
+      <div class="p-8 rounded-2xl border-2 border-red-100 bg-red-50">
+        <div class="text-5xl mb-4 text-center">😩</div>
+        <h3 class="text-xl font-black text-gray-900 mb-5 text-center">Without PeelAways</h3>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3 text-sm text-gray-700">
+            <span class="text-red-500 font-black text-base">✗</span> Strip entire bed at 3am
+          </li>
+          <li class="flex items-center gap-3 text-sm text-gray-700">
+            <span class="text-red-500 font-black text-base">✗</span> Start laundry immediately
+          </li>
+          <li class="flex items-center gap-3 text-sm text-gray-700">
+            <span class="text-red-500 font-black text-base">✗</span> Wait 2 hours for dry sheets
+          </li>
+          <li class="flex items-center gap-3 text-sm text-gray-700">
+            <span class="text-red-500 font-black text-base">✗</span> Remake the whole bed, exhausted
+          </li>
+          <li class="flex items-center gap-3 text-sm text-gray-700">
+            <span class="text-red-500 font-black text-base">✗</span> Repeat 3x per week
+          </li>
+        </ul>
+      </div>
+      <!-- With -->
+      <div class="p-8 rounded-2xl border-2 border-green-100 bg-green-50">
+        <div class="text-5xl mb-4 text-center">😴</div>
+        <h3 class="text-xl font-black text-gray-900 mb-5 text-center">With PeelAways</h3>
+        <ul class="space-y-3">
+          <li class="flex items-center gap-3 text-sm text-gray-700">
+            <span class="text-green-500 font-black text-base">✓</span> Peel off the top layer
+          </li>
+          <li class="flex items-center gap-3 text-sm text-gray-700">
+            <span class="text-green-500 font-black text-base">✓</span> Fresh sheet underneath. Instantly.
+          </li>
+          <li class="flex items-center gap-3 text-sm text-gray-700">
+            <span class="text-green-500 font-black text-base">✓</span> Back to sleep in 3 seconds
+          </li>
+          <li class="flex items-center gap-3 text-sm text-gray-700">
+            <span class="text-green-500 font-black text-base">✓</span> No laundry. No remake. Nothing.
+          </li>
+          <li class="flex items-center gap-3 text-sm text-gray-700">
+            <span class="text-green-500 font-black text-base">✓</span> Do it 5 times before you swap
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= REVIEWS ======= -->
+<section id="reviews" class="py-20" style="background:linear-gradient(160deg,#EBF5FF,#DBEAFE)">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-14 fu">
+      <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Real Talk</span>
+      <h2 class="text-4xl font-black mt-2 text-gray-900">People Are Genuinely Obsessed</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="fu bg-white p-7 rounded-2xl shadow-sm border border-blue-100 relative">
+        <div class="stars text-xl mb-3">★★★★★</div>
+        <p class="text-gray-700 text-sm leading-relaxed mb-5">"My toddler had a nighttime accident. I peeled a layer, tucked him back in, and was asleep again in under 2 minutes. I'm not exaggerating when I say I cried."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full flex items-center justify-center text-white font-black text-sm" style="background:#0F2D5E">S</div>
+          <div><p class="font-bold text-sm">Sarah M.</p><p class="text-xs text-gray-400">Mom of 2, NYC</p></div>
+        </div>
+        <div class="absolute top-5 right-5 text-6xl text-blue-100 font-serif leading-none select-none">❝</div>
+      </div>
+      <div class="fu bg-white p-7 rounded-2xl shadow-sm border border-blue-100 relative" style="transition-delay:.1s">
+        <div class="stars text-xl mb-3">★★★★★</div>
+        <p class="text-gray-700 text-sm leading-relaxed mb-5">"I travel 200k miles a year. PeelAways come to every hotel with me now. I genuinely do not care what the hotel says about their sheets anymore."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full flex items-center justify-center text-white font-black text-sm" style="background:#1E6EC8">J</div>
+          <div><p class="font-bold text-sm">James T.</p><p class="text-xs text-gray-400">Consultant, 200K miles/yr</p></div>
+        </div>
+        <div class="absolute top-5 right-5 text-6xl text-blue-100 font-serif leading-none select-none">❝</div>
+      </div>
+      <div class="fu bg-white p-7 rounded-2xl shadow-sm border border-blue-100 relative" style="transition-delay:.2s">
+        <div class="stars text-xl mb-3">★★★★★</div>
+        <p class="text-gray-700 text-sm leading-relaxed mb-5">"My golden retriever sleeps on the bed. Used to do laundry 4x a week. Now? PeelAways. My dog has never been more welcome. My relationship with him is thriving."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full flex items-center justify-center text-white font-black text-sm" style="background:#4FA3E8">K</div>
+          <div><p class="font-bold text-sm">Katie R.</p><p class="text-xs text-gray-400">Dog mom, Portland</p></div>
+        </div>
+        <div class="absolute top-5 right-5 text-6xl text-blue-100 font-serif leading-none select-none">❝</div>
+      </div>
+    </div>
+    <div class="text-center mt-12 fu">
+      <p class="stars text-3xl mb-2">★★★★★</p>
+      <p class="text-2xl font-black">4.9 / 5</p>
+      <p class="text-gray-400 text-sm">Based on 12,000+ well-rested customers</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FINAL CTA ======= -->
+<section class="py-28 text-center" style="background:linear-gradient(160deg,#EBF5FF 0%,#DBEAFE 50%,#C3DFFB 100%)">
+  <div class="max-w-2xl mx-auto px-6 fu">
+    <div class="text-6xl mb-6">🛏️✨</div>
+    <h2 class="text-5xl font-black text-gray-900 mb-5">
+      Life's Too Short to<br/><span class="gt">Fight a Fitted Sheet.</span>
+    </h2>
+    <p class="text-xl text-gray-500 mb-10">Five layers. One set. Zero midnight laundry runs. That's the whole deal.</p>
+    <a href="https://peelaways.com" target="_blank" id="bottom-cta"
+      class="cta-pulse relative overflow-hidden inline-block px-14 py-5 rounded-full text-xl font-black text-white"
+      style="background:linear-gradient(135deg,#0F2D5E,#1E6EC8)">
+      Shop PeelAways →
+    </a>
+    <p class="text-gray-400 text-sm mt-5">Free shipping. Easy returns. Instant regret for not buying sooner.</p>
+  </div>
+</section>
+
+<!-- ======= FOOTER ======= -->
+<footer class="py-10 border-t border-gray-100 bg-white">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2">
+      <svg width="20" height="20" viewBox="0 0 28 28" fill="none">
+        <rect x="2" y="8" width="24" height="14" rx="3" fill="#4FA3E8" opacity=".45"/>
+        <rect x="2" y="5" width="24" height="14" rx="3" fill="#1E6EC8" opacity=".65"/>
+        <rect x="2" y="2" width="24" height="14" rx="3" fill="#0F2D5E"/>
+      </svg>
+      <span class="font-black text-sm text-gray-900">PeelAways<sup class="text-xs text-gray-400">®</sup></span>
+      <span class="text-gray-200 mx-2">|</span>
+      <span class="text-xs text-gray-400">Disposable Fitted Sheets</span>
+    </div>
+    <p class="text-xs text-gray-400">© 2026 PeelAways. All rights reserved. Go back to bed.</p>
+    <a href="https://peelaways.com" target="_blank" class="text-sm font-bold text-blue-600 hover:underline">peelaways.com →</a>
+  </div>
+</footer>
+
+<!-- ======= JS ======= -->
+<script>
+  /* --- Scroll fade-up --- */
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fu').forEach(el => observer.observe(el));
+
+  /* --- Mess-o-meter bars (triggered on scroll) --- */
+  const barObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.fill-bar').forEach(b => {
+          b.style.width = b.style.getPropertyValue('--pct').trim() ||
+            getComputedStyle(b).getPropertyValue('--pct').trim();
+        });
+        barObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('.bg-white.rounded-3xl').forEach(s => barObs.observe(s));
+
+  /* --- Layer peel interaction --- */
+  let peeled = 0;
+  function peelIt(el, n) {
+    el.classList.add('gone');
+    peeled++;
+    if (peeled >= 5) {
+      setTimeout(() => {
+        document.getElementById('all-peeled').classList.remove('hidden');
+      }, 500);
+    }
+    // confetti burst
+    confettiBurst(el);
+  }
+
+  function resetLayers() {
+    document.querySelectorAll('.peel-layer').forEach(el => el.classList.remove('gone'));
+    document.getElementById('all-peeled').classList.add('hidden');
+    peeled = 0;
+  }
+
+  /* --- Mini confetti --- */
+  function confettiBurst(el) {
+    const colors = ['#0F2D5E','#1E6EC8','#4FA3E8','#FCD34D','#34D399','#F87171'];
+    const rect = el.getBoundingClientRect();
+    for (let i = 0; i < 14; i++) {
+      const p = document.createElement('div');
+      p.className = 'confetti-particle';
+      p.style.cssText = `
+        left:${rect.left + rect.width/2}px; top:${rect.top + rect.height/2}px;
+        background:${colors[Math.floor(Math.random()*colors.length)]};
+        --tx:${(Math.random()-0.5)*160}px;
+        --ty:${-(Math.random()*100+40)}px;
+        --rot:${Math.random()*360}deg;
+        --dur:${0.6 + Math.random()*0.6}s;
+        position:fixed; z-index:9999;
+      `;
+      document.body.appendChild(p);
+      setTimeout(() => p.remove(), 1300);
+    }
+  }
+
+  /* --- Smooth scroll --- */
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior:'smooth', block:'start' }); }
+    });
+  });
+</script>
+</body>
+</html>
