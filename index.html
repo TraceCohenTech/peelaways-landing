@@ -3,9 +3,150 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PeelAways® — Disposable Fitted Sheets. Peel. Toss. Sleep.</title>
+  <title>PeelAways® — Disposable Fitted Sheets | Peel. Toss. Sleep.</title>
+  <meta name="description" content="Disposable fitted sheets with 5–7 waterproof layers stacked in one. Peel off the mess, sleep on a fresh sheet in 60 seconds. As seen on Shark Tank. From $30.99 — one set = up to 70 nights of clean sheets." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://peelaways-landing.vercel.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="product" />
+  <meta property="og:title"       content="PeelAways® — Peel Off the Mess. Sleep on a Fresh Sheet in 60 Seconds." />
+  <meta property="og:description" content="5–7 waterproof layers stacked in one fitted sheet. As Seen on Shark Tank. From $30.99. One set = up to 70 nights of clean sheets." />
+  <meta property="og:url"         content="https://peelaways-landing.vercel.app/" />
+  <meta property="og:image"       content="https://peelaways.com/cdn/shop/files/PeelAways-Logo.png" />
+  <meta property="og:site_name"   content="PeelAways" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="PeelAways® — Peel Off the Mess. Sleep on a Fresh Sheet in 60 Seconds." />
+  <meta name="twitter:description" content="5–7 waterproof layers in one fitted sheet. 60-second changes. As Seen on Shark Tank. From $30.99." />
+  <meta name="twitter:image"       content="https://peelaways.com/cdn/shop/files/PeelAways-Logo.png" />
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#0F2D5E" />
+
+  <!-- Performance: preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://peelaways.com" />
+
+  <!-- Fonts: 3 weights only, display=swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CDN (swap for built CSS in production: npx tailwindcss -o style.css --minify) -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Vercel Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- JSON-LD: Product + Reviews + Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Product",
+        "name": "PeelAways Disposable Fitted Sheets",
+        "description": "Multi-layer disposable fitted sheets with 5–7 waterproof layers stacked in one. Peel the soiled top layer in 60 seconds to reveal a fresh, dry sheet underneath. No PVC, no vinyl, no phthalates. As Seen on Shark Tank.",
+        "brand": { "@type": "Brand", "name": "PeelAways" },
+        "url": "https://peelaways.com/products/peelaways",
+        "image": "https://peelaways.com/cdn/shop/files/PeelAways-Logo.png",
+        "offers": {
+          "@type": "Offer",
+          "price": "30.99",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": "https://peelaways.com/products/peelaways",
+          "seller": { "@type": "Organization", "name": "PeelAways" }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.2",
+          "reviewCount": "1810",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Kathy Smith" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "These sheets are a lifesaver. I've been doing wash every day til I found these. Only once did he get the whole sheet wet and that was a really long sleep for him. These r awesome.",
+            "name": "These sheets are a lifesaver"
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Brooklyn Shields" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "As a mom and a caregiver, these sheets have been a great addition to make my day easier. Quicker bed changes and less laundry. WIN.",
+            "name": "Essential as a mom and caregiver"
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Christopher D." },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "PeelAways sheets have literally been a godsend for me. I placed them on my almost-95 year old mom's bed and they've been such a big help. Her caregivers love how easy they are to use.",
+            "name": "PeelAways have literally been a godsend"
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Tricia Grover" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "MORE COMFORTABLE THAN REGULAR SHEETS. COST EFFECTIVE AND SAVES TIME. I LOVE THEM!",
+            "name": "EVERYTHING IS BETTER DISPOSABLE!"
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Roz Mabson" },
+            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+            "reviewBody": "Bought PeelAways as a gift for my Dad who has Dementia. His wife says they are a lifesaver and make his bed care so much easier.",
+            "name": "A lifesaver for dementia care"
+          }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "PeelAways",
+        "url": "https://peelaways.com",
+        "sameAs": [
+          "https://www.amazon.com/PEELAWAYS-Peelaways-Disposable-Fitted-Sheet/dp/B078HK764Y"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How many layers does PeelAways have?",
+            "acceptedAnswer": { "@type": "Answer", "text": "PeelAways comes with 5–7 layers depending on the size. Each layer lasts 7–10 nights if no accidents occur, so one set can give you up to 70 nights of clean sheets." }
+          },
+          {
+            "@type": "Question",
+            "name": "Are PeelAways waterproof?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each layer features HydroShield™ 100% waterproof protection and can hold up to 1 liter of liquid without breakthrough. Your mattress stays completely dry." }
+          },
+          {
+            "@type": "Question",
+            "name": "Do PeelAways make a crinkling noise?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Unlike plastic mattress covers, PeelAways are made from a soft bamboo, rayon, and polyester blend — quiet, breathable, and comfortable to sleep on. Multiple customers describe them as more comfortable than regular sheets." }
+          },
+          {
+            "@type": "Question",
+            "name": "What sizes are available?",
+            "acceptedAnswer": { "@type": "Answer", "text": "PeelAways come in 7 sizes: Crib (52x28), Cot (75x30), Twin (75x39), Twin XL (80x39 — fits standard hospital beds), Full (75x54), Queen (80x60), and King (80x78)." }
+          },
+          {
+            "@type": "Question",
+            "name": "Are PeelAways safe and chemical-free?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. PeelAways contain no Vinyl, PVC, Phthalates, or fire retardants. They are breathable, odorless, and free from harsh chemicals." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
     * { font-family: 'Inter', sans-serif; }
 
@@ -23,11 +164,59 @@
       background-clip: text;
     }
 
-    @keyframes mascot-float {
-      0%,100% { transform: translateY(0) rotate(-1.5deg); }
-      50%      { transform: translateY(-14px) rotate(1.5deg); }
+    /* Reduced motion: disable all animations for users who prefer it */
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes mascot-float {
+        0%,100% { transform: translateY(0) rotate(-1.5deg); }
+        50%      { transform: translateY(-14px) rotate(1.5deg); }
+      }
+      .mascot { animation: mascot-float 3.2s ease-in-out infinite; }
+
+      @keyframes tick { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+      .ticker-inner { animation: tick 22s linear infinite; }
+
+      @keyframes scroll-left {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .testimonial-track { animation: scroll-left 40s linear infinite; }
+
+      @keyframes rot { to { transform: rotate(360deg); } }
+      .spin-bg { animation: rot 30s linear infinite; }
+
+      @keyframes soft-pulse {
+        0%,100% { box-shadow: 0 8px 30px rgba(30,110,200,.4); }
+        50%      { box-shadow: 0 8px 50px rgba(30,110,200,.6), 0 0 0 8px rgba(30,110,200,.08); }
+      }
+      .cta-pulse { animation: soft-pulse 2.4s ease-in-out infinite; }
+
+      @keyframes fill-bar { from{width:0} to{width:var(--pct)} }
+      .fill-bar { animation: fill-bar 1.4s ease-out forwards; width:0; }
+
+      @keyframes shimmer {
+        0%   { background-position: -200% center; }
+        100% { background-position: 200% center; }
+      }
+      .shark-badge {
+        background: linear-gradient(90deg, #0F2D5E, #1E3A6E, #2563EB, #0F2D5E);
+        background-size: 300% auto;
+        animation: shimmer 3s linear infinite;
+      }
     }
-    .mascot { animation: mascot-float 3.2s ease-in-out infinite; }
+
+    /* Fallback: static for reduced-motion users */
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-inner, .testimonial-track, .spin-bg, .mascot { animation: none !important; }
+      .fill-bar { width: var(--pct) !important; }
+      .shark-badge { background: #0F2D5E; }
+    }
+
+    /* Focus styles */
+    :focus-visible {
+      outline: 3px solid #1E6EC8;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
 
     .peel-layer {
       transition: transform .45s cubic-bezier(.22,.87,.37,1.25), opacity .4s ease;
@@ -52,8 +241,7 @@
       pointer-events: none;
     }
 
-    @keyframes tick { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-    .ticker-inner { animation: tick 22s linear infinite; white-space: nowrap; }
+    .ticker-inner { white-space: nowrap; }
 
     .fu { opacity:0; transform:translateY(28px); transition: opacity .6s ease, transform .6s ease; }
     .fu.on { opacity:1; transform:none; }
@@ -63,92 +251,103 @@
 
     .step-dot { width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:.85rem; color:white; flex-shrink:0; }
 
-    @keyframes fill-bar { from{width:0} to{width:var(--pct)} }
-    .fill-bar { animation: fill-bar 1.4s ease-out forwards; width:0; }
-
     .stars { color:#F59E0B; }
-
-    @keyframes soft-pulse {
-      0%,100% { box-shadow: 0 8px 30px rgba(30,110,200,.4); }
-      50%      { box-shadow: 0 8px 50px rgba(30,110,200,.6), 0 0 0 8px rgba(30,110,200,.08); }
-    }
-    .cta-pulse { animation: soft-pulse 2.4s ease-in-out infinite; }
-
-    .confetti-particle {
-      position: absolute;
-      width: 8px; height: 8px;
-      border-radius: 2px;
-      animation: confetti-fly var(--dur) ease-out forwards;
-      pointer-events: none;
-    }
-    @keyframes confetti-fly {
-      0%   { transform: translate(0,0) rotate(0deg); opacity:1; }
-      100% { transform: translate(var(--tx),var(--ty)) rotate(var(--rot)); opacity:0; }
-    }
-
-    @keyframes rot { to { transform: rotate(360deg); } }
-    .spin-bg { animation: rot 30s linear infinite; }
 
     .layer-item { border-radius:12px; border:2px solid rgba(255,255,255,.7); transition:all .3s ease; }
 
-    /* Scrolling testimonials */
-    .testimonial-track {
-      display: flex;
-      gap: 20px;
-      animation: scroll-left 40s linear infinite;
-      width: max-content;
-    }
+    .testimonial-track { display: flex; gap: 20px; width: max-content; }
     .testimonial-track:hover { animation-play-state: paused; }
-    @keyframes scroll-left {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
 
-    /* Rating bar */
     .rating-fill { height: 8px; border-radius: 4px; background: linear-gradient(90deg,#0F2D5E,#1E6EC8); transition: width 1.2s ease; }
 
-    /* Shark Tank badge shimmer */
-    @keyframes shimmer {
-      0%   { background-position: -200% center; }
-      100% { background-position: 200% center; }
-    }
     .shark-badge {
-      background: linear-gradient(90deg, #0F2D5E, #1E3A6E, #2563EB, #0F2D5E);
-      background-size: 300% auto;
-      animation: shimmer 3s linear infinite;
+      background: #0F2D5E;
     }
+
+    /* Sticky buy bar */
+    #sticky-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      transform: translateY(100%);
+      transition: transform .3s ease;
+      z-index: 100;
+    }
+    #sticky-bar.visible { transform: translateY(0); }
+
+    /* Confetti */
+    .confetti-particle {
+      position: fixed;
+      width: 8px; height: 8px;
+      border-radius: 2px;
+      pointer-events: none;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      @keyframes confetti-fly {
+        0%   { transform: translate(0,0) rotate(0deg); opacity:1; }
+        100% { transform: translate(var(--tx),var(--ty)) rotate(var(--rot)); opacity:0; }
+      }
+      .confetti-particle { animation: confetti-fly var(--dur) ease-out forwards; }
+    }
+
+    /* FAQ accordion */
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .35s ease, padding .35s ease; }
+    .faq-answer.open { max-height: 300px; }
+    .faq-icon { transition: transform .3s ease; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
   </style>
 </head>
 <body class="bg-white text-gray-900 overflow-x-hidden">
 
+<!-- ======= STICKY BUY BAR (mobile-first) ======= -->
+<div id="sticky-bar" class="bg-white border-t border-gray-200 shadow-2xl px-4 py-3" aria-label="Buy PeelAways">
+  <div class="max-w-6xl mx-auto flex items-center justify-between gap-4">
+    <div class="hidden sm:flex items-center gap-4">
+      <div>
+        <p class="text-xs text-gray-400 font-semibold">One-time</p>
+        <p class="text-xl font-black" style="color:#0F2D5E">$30.99</p>
+      </div>
+      <div class="text-gray-200">|</div>
+      <div class="stars text-sm">★★★★ <span class="text-gray-500 font-semibold text-xs">4.2 · 1,800+ reviews</span></div>
+    </div>
+    <a href="https://peelaways.com/products/peelaways" target="_blank" rel="noopener noreferrer"
+      class="flex-1 sm:flex-none text-center px-8 py-3 rounded-full text-base font-black text-white"
+      style="background:linear-gradient(135deg,#0F2D5E,#1E6EC8)"
+      data-track="sticky-cta">
+      Get PeelAways — From $30.99 →
+    </a>
+  </div>
+</div>
+
 <!-- ======= ANNOUNCEMENT BAR ======= -->
 <div class="text-center text-sm font-bold py-2.5 text-white overflow-hidden"
   style="background:linear-gradient(90deg,#0F2D5E,#1E6EC8,#4FA3E8,#1E6EC8,#0F2D5E)">
-  🎉 FREE SHIPPING on orders $50+ &nbsp;·&nbsp; 🦈 As Seen on Shark Tank &nbsp;·&nbsp; ⭐ 4.2 Stars · 1,800+ Amazon Reviews
+  🎉 FREE SHIPPING on orders $50+ &nbsp;·&nbsp; <span aria-label="As Seen on Shark Tank">🦈 As Seen on Shark Tank</span> &nbsp;·&nbsp; ⭐ 4.2 Stars · 1,800+ Amazon Reviews
 </div>
 
 <!-- ======= NAV ======= -->
-<nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+<nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm" role="navigation" aria-label="Main navigation">
   <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-    <a href="#" class="flex items-center gap-2">
-      <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+    <a href="#" class="flex items-center gap-2" aria-label="PeelAways home">
+      <svg width="26" height="26" viewBox="0 0 28 28" fill="none" role="img" aria-hidden="true">
         <rect x="2" y="8" width="24" height="14" rx="3" fill="#4FA3E8" opacity=".45"/>
         <rect x="2" y="5" width="24" height="14" rx="3" fill="#1E6EC8" opacity=".65"/>
         <rect x="2" y="2" width="24" height="14" rx="3" fill="#0F2D5E"/>
       </svg>
       <span class="text-xl font-black tracking-tight text-gray-900">
-        Peel<span style="color:#1E6EC8">Aways</span><sup class="text-xs font-bold text-gray-400">®</sup>
+        Peel<span style="color:#1E6EC8">Aways</span><sup class="text-xs font-bold text-gray-400" aria-hidden="true">®</sup>
       </span>
     </a>
     <div class="hidden md:flex items-center gap-7 text-sm font-semibold text-gray-600">
       <a href="#how" class="hover:text-blue-600 transition-colors">How It Works</a>
       <a href="#mess" class="hover:text-blue-600 transition-colors">The Mess Test</a>
-      <a href="#specs" class="hover:text-blue-600 transition-colors">Specs</a>
+      <a href="#specs" class="hover:text-blue-600 transition-colors">Specs &amp; Sizes</a>
       <a href="#reviews" class="hover:text-blue-600 transition-colors">Reviews</a>
+      <a href="#faq" class="hover:text-blue-600 transition-colors">FAQ</a>
     </div>
-    <a href="https://peelaways.com" target="_blank"
+    <a href="https://peelaways.com/products/peelaways" target="_blank" rel="noopener noreferrer"
       class="cta-pulse px-5 py-2.5 rounded-full text-sm font-bold text-white transition-all hover:scale-105"
-      style="background:linear-gradient(135deg,#0F2D5E,#1E6EC8)">
+      style="background:linear-gradient(135deg,#0F2D5E,#1E6EC8)"
+      data-track="nav-cta">
       Shop Now — From $30.99
     </a>
   </div>
@@ -157,8 +356,8 @@
 <!-- ======= HERO ======= -->
 <section class="relative overflow-hidden" style="background:linear-gradient(150deg,#EBF5FF 0%,#DBEAFE 40%,#C3DFFB 100%)">
 
-  <div class="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden opacity-20">
-    <div class="spin-bg w-[800px] h-[800px] rounded-full"
+  <div class="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden opacity-20" aria-hidden="true">
+    <div class="spin-bg w-[800px] h-[800px] rounded-full will-change-transform"
       style="background:radial-gradient(circle at 40% 40%, #1E6EC8, transparent 60%), radial-gradient(circle at 70% 70%, #4FA3E8, transparent 50%)">
     </div>
   </div>
@@ -167,60 +366,74 @@
 
     <!-- Left: Copy -->
     <div class="fu">
-      <!-- Badges row -->
+      <!-- Badges -->
       <div class="flex flex-wrap gap-2 mb-6">
         <span class="shark-badge text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
-          🦈 As Seen on Shark Tank
+          <span aria-hidden="true">🦈</span> As Seen on Shark Tank
         </span>
         <span class="bg-white text-xs font-bold px-3 py-1.5 rounded-full shadow-sm border border-gray-100 flex items-center gap-1">
-          <span class="stars">★★★★</span><span class="text-gray-700">4.2 · 1,800+ Amazon Reviews</span>
+          <span class="stars" aria-label="4.2 out of 5 stars">★★★★</span><span class="text-gray-700">4.2 · 1,800+ Amazon Reviews</span>
         </span>
       </div>
 
-      <h1 class="text-5xl md:text-[3.6rem] font-black leading-[1.04] mb-5">
-        <span class="gt">Stop Fighting</span><br/>Your Fitted Sheets.
+      <h1 class="text-5xl md:text-[3.4rem] font-black leading-[1.04] mb-3">
+        <span class="gt">Peel Off the Mess.</span><br/>Sleep on a Fresh Sheet<br/>in 60 Seconds.
       </h1>
+
+      <!-- 70-nights callout — the single biggest value reframe -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold mb-5"
+        style="background:rgba(15,45,94,.08); color:#0F2D5E; border: 1.5px solid rgba(15,45,94,.15)">
+        <span aria-hidden="true">🛏️</span> One set = up to <strong>70 nights</strong> of clean sheets
+      </div>
+
       <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-md">
-        PeelAways are 100% waterproof disposable fitted sheets with <strong>5–7 layers stacked in one</strong>.
-        Each layer lasts <strong>7–10 nights</strong>. When life gets messy, peel, toss, and go back to sleep.
+        PeelAways stack <strong>5–7 waterproof layers</strong> in one fitted sheet. Each layer lasts 7–10 nights. When life gets messy, peel the top layer, toss it, and the one underneath is <em>completely dry</em>.
       </p>
 
-      <!-- Price row -->
+      <!-- Price anchoring -->
       <div class="flex items-center gap-4 mb-6">
         <div class="px-4 py-3 bg-white rounded-xl shadow-sm border border-gray-100">
           <p class="text-xs text-gray-400 font-semibold">One-time</p>
           <p class="text-2xl font-black text-gray-900">$30.99</p>
+          <p class="text-xs text-gray-400">≈ $0.44/night</p>
         </div>
-        <div class="px-4 py-3 rounded-xl text-white" style="background:linear-gradient(135deg,#0F2D5E,#1E6EC8)">
+        <div class="px-4 py-3 rounded-xl text-white relative" style="background:linear-gradient(135deg,#0F2D5E,#1E6EC8)">
+          <span class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-green-400 text-green-900 text-xs font-black px-2 py-0.5 rounded-full whitespace-nowrap">Most Popular</span>
           <p class="text-xs opacity-80 font-semibold">Subscribe &amp; Save 15%</p>
           <p class="text-2xl font-black">$26.34</p>
+          <p class="text-xs opacity-70">Save $4.65 per order</p>
         </div>
       </div>
 
-      <div class="flex flex-wrap gap-4 items-center mb-8">
-        <a href="https://peelaways.com" target="_blank"
+      <div class="flex flex-wrap gap-4 items-center mb-6">
+        <a href="https://peelaways.com/products/peelaways" target="_blank" rel="noopener noreferrer"
           class="cta-pulse px-8 py-4 rounded-full text-lg font-black text-white transition-all hover:scale-105"
-          style="background:linear-gradient(135deg,#0F2D5E,#1E6EC8)">
-          Shop PeelAways →
+          style="background:linear-gradient(135deg,#0F2D5E,#1E6EC8)"
+          data-track="hero-cta">
+          Get PeelAways →
         </a>
         <a href="#how" class="text-blue-700 font-semibold hover:underline text-sm flex items-center gap-1">
-          See how it works ↓
+          See how it works <span aria-hidden="true">↓</span>
         </a>
       </div>
 
+      <!-- Risk reversal right under hero CTA -->
+      <p class="text-xs text-gray-400 font-medium mb-5">
+        <span aria-hidden="true">🛡️</span> 30-day money-back guarantee &nbsp;·&nbsp; Free shipping on $50+
+      </p>
+
       <div class="flex flex-wrap gap-2.5">
-        <span class="px-3 py-1.5 bg-white rounded-full text-xs font-semibold text-gray-700 shadow-sm border border-gray-100">⚡ Change in 60 Seconds</span>
-        <span class="px-3 py-1.5 bg-white rounded-full text-xs font-semibold text-gray-700 shadow-sm border border-gray-100">💧 100% Waterproof</span>
-        <span class="px-3 py-1.5 bg-white rounded-full text-xs font-semibold text-gray-700 shadow-sm border border-gray-100">🌿 No PVC · No Vinyl · No Phthalates</span>
-        <span class="px-3 py-1.5 bg-white rounded-full text-xs font-semibold text-gray-700 shadow-sm border border-gray-100">🔁 5–7 Layers Per Set</span>
+        <span class="px-3 py-1.5 bg-white rounded-full text-xs font-semibold text-gray-700 shadow-sm border border-gray-100"><span aria-hidden="true">⚡</span> 60-Second Changes</span>
+        <span class="px-3 py-1.5 bg-white rounded-full text-xs font-semibold text-gray-700 shadow-sm border border-gray-100"><span aria-hidden="true">💧</span> 100% Waterproof</span>
+        <span class="px-3 py-1.5 bg-white rounded-full text-xs font-semibold text-gray-700 shadow-sm border border-gray-100"><span aria-hidden="true">🌿</span> No PVC · No Vinyl · No Phthalates</span>
       </div>
     </div>
 
-    <!-- Right: Mascot + layer stack -->
+    <!-- Right: Mascot + interactive peel stack -->
     <div class="flex flex-col items-center gap-6">
 
-      <!-- CSS Mascot -->
-      <div class="mascot select-none relative">
+      <!-- Mascot (decorative) -->
+      <div class="mascot select-none" aria-hidden="true">
         <div class="relative mx-auto" style="width:160px">
           <div class="w-40 h-40 bg-white rounded-[22px] shadow-2xl border-4 mx-auto flex items-center justify-center relative"
             style="border-color:#BFDBFE; box-shadow:0 24px 60px rgba(30,110,200,.22)">
@@ -237,7 +450,7 @@
               </div>
             </div>
             <div class="absolute" style="top:82px;left:50%;transform:translateX(-50%)">
-              <svg width="44" height="24" viewBox="0 0 44 24" fill="none">
+              <svg width="44" height="24" viewBox="0 0 44 24" fill="none" aria-hidden="true">
                 <path d="M5 6 Q22 22 39 6" stroke="#1a1a1a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
               </svg>
             </div>
@@ -246,96 +459,132 @@
             </div>
             <div class="absolute text-2xl" style="top:-12px;right:-16px;transform:rotate(20deg)">👆</div>
           </div>
-          <div class="absolute flex items-end gap-28" style="top:60px;left:50%;transform:translateX(-50%)">
+          <div class="absolute flex items-end gap-28" style="top:60px;left:50%;transform:translateX(-50%)" aria-hidden="true">
             <div class="w-3 h-10 rounded-full" style="background:#BFDBFE;transform:rotate(25deg)"></div>
             <div class="w-3 h-10 rounded-full" style="background:#BFDBFE;transform:rotate(-25deg)"></div>
           </div>
-          <div class="flex justify-center gap-8 mt-1.5">
+          <div class="flex justify-center gap-8 mt-1.5" aria-hidden="true">
             <div class="w-4 h-10 rounded-full" style="background:#BFDBFE"></div>
             <div class="w-4 h-10 rounded-full" style="background:#BFDBFE"></div>
           </div>
-          <div class="flex justify-center gap-5 -mt-1">
+          <div class="flex justify-center gap-5 -mt-1" aria-hidden="true">
             <div class="w-11 h-5 rounded-full shadow-md" style="background:#0F2D5E"></div>
             <div class="w-11 h-5 rounded-full shadow-md" style="background:#0F2D5E"></div>
           </div>
         </div>
-        <p class="text-center text-blue-700 text-sm font-bold mt-3">Click the layers below! 👇</p>
+        <p class="text-center text-blue-700 text-sm font-bold mt-3">Click the layers below! <span aria-hidden="true">👇</span></p>
       </div>
 
       <!-- Interactive peel stack -->
-      <div id="layer-stack" class="w-72 space-y-1.5">
-        <div class="peel-layer layer-item bg-white flex items-center gap-3 px-5 py-3 shadow-md" onclick="peelIt(this,1)">
-          <span class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black flex-shrink-0" style="background:#0F2D5E">1</span>
-          <span class="font-semibold text-sm text-gray-800">Layer 1 — Fresh &amp; clean ✨</span>
-          <span class="ml-auto text-xs font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded-full">Active</span>
+      <div id="layer-stack" class="w-72 space-y-1.5" role="group" aria-label="Interactive sheet layer demo — click each layer to peel it away">
+        <div class="peel-layer layer-item bg-white flex items-center gap-3 px-5 py-3 shadow-md"
+          role="button" tabindex="0" aria-label="Layer 1 — Fresh and clean. Click to peel."
+          onclick="peelIt(this)" onkeydown="handlePeelKey(event, this)">
+          <span class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black flex-shrink-0" style="background:#0F2D5E" aria-hidden="true">1</span>
+          <span class="font-semibold text-sm text-gray-800">Layer 1 — Fresh &amp; clean <span aria-hidden="true">✨</span></span>
+          <span class="ml-auto text-xs font-bold text-green-600 bg-green-50 px-2 py-0.5 rounded-full" aria-hidden="true">Active</span>
         </div>
-        <div class="peel-layer layer-item bg-blue-50 flex items-center gap-3 px-5 py-3 shadow-sm" onclick="peelIt(this,2)">
-          <span class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black flex-shrink-0" style="background:#1E6EC8">2</span>
+        <div class="peel-layer layer-item bg-blue-50 flex items-center gap-3 px-5 py-3 shadow-sm"
+          role="button" tabindex="0" aria-label="Layer 2 — Ready and waiting."
+          onclick="peelIt(this)" onkeydown="handlePeelKey(event, this)">
+          <span class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black flex-shrink-0" style="background:#1E6EC8" aria-hidden="true">2</span>
           <span class="font-semibold text-sm text-gray-700">Layer 2 — Ready &amp; waiting</span>
-          <span class="ml-auto text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">Clean</span>
+          <span class="ml-auto text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full" aria-hidden="true">Clean</span>
         </div>
-        <div class="peel-layer layer-item bg-blue-100 flex items-center gap-3 px-5 py-3 shadow-sm" onclick="peelIt(this,3)">
-          <span class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black flex-shrink-0" style="background:#2B7FD4">3</span>
+        <div class="peel-layer layer-item bg-blue-100 flex items-center gap-3 px-5 py-3 shadow-sm"
+          role="button" tabindex="0" aria-label="Layer 3 — Perfectly clean."
+          onclick="peelIt(this)" onkeydown="handlePeelKey(event, this)">
+          <span class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black flex-shrink-0" style="background:#2B7FD4" aria-hidden="true">3</span>
           <span class="font-semibold text-sm text-gray-700">Layer 3 — Perfectly clean</span>
-          <span class="ml-auto text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">Clean</span>
+          <span class="ml-auto text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full" aria-hidden="true">Clean</span>
         </div>
-        <div class="peel-layer layer-item bg-blue-200 flex items-center gap-3 px-5 py-3 shadow-sm" onclick="peelIt(this,4)">
-          <span class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black flex-shrink-0" style="background:#3B9AE1">4</span>
+        <div class="peel-layer layer-item bg-blue-200 flex items-center gap-3 px-5 py-3 shadow-sm"
+          role="button" tabindex="0" aria-label="Layer 4 — Still going strong."
+          onclick="peelIt(this)" onkeydown="handlePeelKey(event, this)">
+          <span class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black flex-shrink-0" style="background:#3B9AE1" aria-hidden="true">4</span>
           <span class="font-semibold text-sm text-gray-700">Layer 4 — Still going strong</span>
-          <span class="ml-auto text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full">Clean</span>
+          <span class="ml-auto text-xs font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-full" aria-hidden="true">Clean</span>
         </div>
-        <div class="peel-layer layer-item bg-blue-300 flex items-center gap-3 px-5 py-3 shadow-sm" onclick="peelIt(this,5)">
-          <span class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black flex-shrink-0" style="background:#4FA3E8">5</span>
+        <div class="peel-layer layer-item bg-blue-300 flex items-center gap-3 px-5 py-3 shadow-sm"
+          role="button" tabindex="0" aria-label="Layer 5 — The final guardian."
+          onclick="peelIt(this)" onkeydown="handlePeelKey(event, this)">
+          <span class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-black flex-shrink-0" style="background:#4FA3E8" aria-hidden="true">5</span>
           <span class="font-semibold text-sm text-gray-600">Layer 5 — The final guardian</span>
-          <span class="ml-auto text-xs font-bold text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full">Last</span>
+          <span class="ml-auto text-xs font-bold text-gray-500 bg-gray-100 px-2 py-0.5 rounded-full" aria-hidden="true">Last</span>
         </div>
-        <div id="all-peeled" class="hidden text-center py-4 text-blue-700 font-bold text-sm">
-          🎉 All peeled! &nbsp;<button onclick="resetLayers()" class="underline text-blue-600">Reset</button>
+        <div id="all-peeled" class="hidden text-center py-4 text-blue-700 font-bold text-sm" role="status" aria-live="polite">
+          <span aria-hidden="true">🎉</span> All peeled! &nbsp;<button onclick="resetLayers()" class="underline text-blue-600">Reset demo</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Ticker -->
-  <div class="mt-4 overflow-hidden border-t border-blue-100 py-3" style="background:rgba(255,255,255,.65)">
+  <div class="mt-4 overflow-hidden border-t border-blue-100 py-3" style="background:rgba(255,255,255,.65)" aria-hidden="true">
     <div class="ticker-inner inline-flex gap-10 text-sm font-bold text-blue-900">
       <span>🦈 AS SEEN ON SHARK TANK</span><span>·</span>
       <span>💧 100% WATERPROOF</span><span>·</span>
       <span>⚡ CHANGE IN 60 SECONDS</span><span>·</span>
+      <span>🛏️ ONE SET = UP TO 70 NIGHTS</span><span>·</span>
       <span>🌿 NO PVC · NO VINYL · NO PHTHALATES</span><span>·</span>
-      <span>🛏️ 7–10 NIGHTS PER LAYER</span><span>·</span>
       <span>⭐ 1,800+ AMAZON REVIEWS</span><span>·</span>
       <span>📦 7 SIZES AVAILABLE</span><span>·</span>
       <span>🦈 AS SEEN ON SHARK TANK</span><span>·</span>
       <span>💧 100% WATERPROOF</span><span>·</span>
       <span>⚡ CHANGE IN 60 SECONDS</span><span>·</span>
+      <span>🛏️ ONE SET = UP TO 70 NIGHTS</span><span>·</span>
       <span>🌿 NO PVC · NO VINYL · NO PHTHALATES</span><span>·</span>
-      <span>🛏️ 7–10 NIGHTS PER LAYER</span><span>·</span>
       <span>⭐ 1,800+ AMAZON REVIEWS</span><span>·</span>
       <span>📦 7 SIZES AVAILABLE</span><span>·</span>
     </div>
   </div>
 </section>
 
-<!-- ======= REAL STATS ======= -->
+<!-- ======= STATS ======= -->
 <section class="py-20 bg-white text-center">
   <div class="max-w-3xl mx-auto px-6 fu">
-    <p class="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-4">
+    <h2 class="text-4xl md:text-5xl font-black text-gray-900 leading-tight mb-4">
       When did you last<br/><span class="gt">actually change your sheets?</span>
-    </p>
-    <p class="text-lg text-gray-400 mb-14">No judgment. We've all been there. That's why PeelAways exist.</p>
+    </h2>
+    <p class="text-lg text-gray-500 mb-14">No judgment. We've all been there. That's why PeelAways exist.</p>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
       <div class="p-7 rounded-2xl bg-gray-50 border border-gray-100">
         <p class="text-5xl font-black mb-2" style="color:#0F2D5E">60 sec</p>
-        <p class="text-sm text-gray-500 font-medium">To swap a layer. The fastest sheet change in history.</p>
+        <p class="text-sm text-gray-600 font-medium">To swap a layer. Fastest sheet change ever attempted by a sleep-deprived parent.</p>
       </div>
       <div class="p-7 rounded-2xl text-white" style="background:linear-gradient(135deg,#0F2D5E,#1E6EC8)">
-        <p class="text-5xl font-black mb-2">7–10</p>
-        <p class="text-sm opacity-80 font-medium">Nights each clean layer lasts — if no accidents happen sooner.</p>
+        <p class="text-5xl font-black mb-2">70</p>
+        <p class="text-sm opacity-80 font-medium">Nights of clean sheets from a single set. 5–7 layers × 7–10 nights each.</p>
       </div>
       <div class="p-7 rounded-2xl bg-gray-50 border border-gray-100">
         <p class="text-5xl font-black mb-2" style="color:#0F2D5E">80%</p>
-        <p class="text-sm text-gray-500 font-medium">Less laundry. Real stat from real customers.</p>
+        <p class="text-sm text-gray-600 font-medium">Less laundry. Real number from real caregivers who switched to PeelAways.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= SKEPTIC SECTION ======= -->
+<section class="py-16 bg-blue-50 border-y border-blue-100">
+  <div class="max-w-4xl mx-auto px-6 fu">
+    <h2 class="text-3xl font-black text-center mb-10 text-gray-900">
+      <span aria-hidden="true">🤔</span> "Wait — disposable sheets that actually work?"
+    </h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-blue-100">
+        <p class="text-xs font-bold text-blue-600 mb-3 uppercase tracking-wider">Skeptic → Believer</p>
+        <p class="text-sm text-gray-700 leading-relaxed italic">"Bed sheets that you can throw out when soiled? That sounds unlikely! [After testing] — the layer underneath was <strong>completely dry!</strong>"</p>
+        <p class="text-xs text-gray-400 mt-3 font-semibold">— Shiri R. · WonderBaby.org · Now subscribed monthly</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-blue-100">
+        <p class="text-xs font-bold text-blue-600 mb-3 uppercase tracking-wider">First-Time Buyer</p>
+        <p class="text-sm text-gray-700 leading-relaxed italic">"I don't normally write reviews, but PeelAways deserves one. These have been genuinely <strong>life-changing</strong> for our household."</p>
+        <p class="text-xs text-gray-400 mt-3 font-semibold">— Anonymous · New York · Verified Purchase</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-blue-100">
+        <p class="text-xs font-bold text-blue-600 mb-3 uppercase tracking-wider">Healthcare Professional</p>
+        <p class="text-sm text-gray-700 leading-relaxed italic">"I brought these to a memory care facility where no one had heard of them. After the first night, they were <strong>hooked</strong>. Now the whole facility uses them."</p>
+        <p class="text-xs text-gray-400 mt-3 font-semibold">— Healthcare worker · Verified caregiver</p>
       </div>
     </div>
   </div>
@@ -347,57 +596,57 @@
     <div class="text-center mb-14 fu">
       <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Real Talk</span>
       <h2 class="text-4xl font-black mt-2 text-gray-900">The Official Mess-O-Meter™</h2>
-      <p class="text-gray-500 mt-2">Measured in "how many loads of laundry per week would this cause?"</p>
+      <p class="text-gray-600 mt-2">Measured in "how many laundry loads per week would this normally cause?"</p>
     </div>
     <div class="bg-white rounded-3xl shadow-xl p-8 space-y-7 fu">
       <div class="mess-row">
         <div class="flex justify-between items-center mb-1.5">
-          <span class="font-bold text-sm text-gray-800">🐕 Great Dane who "has some bowel issues"</span>
+          <span class="font-bold text-sm text-gray-800"><span aria-hidden="true">🐕</span> Great Dane with "some bowel issues"</span>
           <span class="text-xs font-bold text-orange-500">VERY HIGH</span>
         </div>
-        <div class="h-4 bg-gray-100 rounded-full overflow-hidden">
+        <div class="h-4 bg-gray-100 rounded-full overflow-hidden" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Very high mess level">
           <div class="fill-bar h-full rounded-full" style="--pct:85%;background:linear-gradient(90deg,#f97316,#fb923c)"></div>
         </div>
       </div>
       <div class="mess-row">
         <div class="flex justify-between items-center mb-1.5">
-          <span class="font-bold text-sm text-gray-800">👶 Potty training toddler — nighttime edition</span>
+          <span class="font-bold text-sm text-gray-800"><span aria-hidden="true">👶</span> Potty training toddler — nighttime edition</span>
           <span class="text-xs font-bold text-red-500">CRITICAL</span>
         </div>
-        <div class="h-4 bg-gray-100 rounded-full overflow-hidden">
+        <div class="h-4 bg-gray-100 rounded-full overflow-hidden" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Critical mess level">
           <div class="fill-bar h-full rounded-full" style="--pct:95%;background:linear-gradient(90deg,#ef4444,#f97316)"></div>
         </div>
       </div>
       <div class="mess-row">
         <div class="flex justify-between items-center mb-1.5">
-          <span class="font-bold text-sm text-gray-800">👴 93-year-old parent who needs daily care</span>
+          <span class="font-bold text-sm text-gray-800"><span aria-hidden="true">👴</span> Elderly parent who needs daily care</span>
           <span class="text-xs font-bold text-red-600">DAILY LAUNDRY</span>
         </div>
-        <div class="h-4 bg-gray-100 rounded-full overflow-hidden">
+        <div class="h-4 bg-gray-100 rounded-full overflow-hidden" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" aria-label="Daily laundry level">
           <div class="fill-bar h-full rounded-full" style="--pct:99%;background:linear-gradient(90deg,#7c3aed,#ef4444)"></div>
         </div>
       </div>
       <div class="mess-row">
         <div class="flex justify-between items-center mb-1.5">
-          <span class="font-bold text-sm text-gray-800">☕ Sunday morning coffee in bed (spilled)</span>
+          <span class="font-bold text-sm text-gray-800"><span aria-hidden="true">☕</span> Sunday morning coffee in bed (spilled)</span>
           <span class="text-xs font-bold text-amber-500">MODERATE</span>
         </div>
-        <div class="h-4 bg-gray-100 rounded-full overflow-hidden">
+        <div class="h-4 bg-gray-100 rounded-full overflow-hidden" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Moderate mess level">
           <div class="fill-bar h-full rounded-full" style="--pct:50%;background:linear-gradient(90deg,#f59e0b,#fbbf24)"></div>
         </div>
       </div>
       <div class="mess-row">
         <div class="flex justify-between items-center mb-1.5">
-          <span class="font-bold text-sm text-gray-800">🤧 Full flu week — night sweats + everything</span>
+          <span class="font-bold text-sm text-gray-800"><span aria-hidden="true">🤧</span> Full flu week — night sweats + everything</span>
           <span class="text-xs font-bold text-red-500">SEND HELP</span>
         </div>
-        <div class="h-4 bg-gray-100 rounded-full overflow-hidden">
+        <div class="h-4 bg-gray-100 rounded-full overflow-hidden" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="Critical mess level">
           <div class="fill-bar h-full rounded-full" style="--pct:92%;background:linear-gradient(90deg,#ef4444,#f97316)"></div>
         </div>
       </div>
       <div class="pt-2 border-t border-gray-100 text-center">
-        <p class="text-sm font-semibold text-gray-500">PeelAways handles every single one of these. &nbsp;
-          <a href="https://peelaways.com" target="_blank" class="text-blue-600 font-bold hover:underline">Shop now →</a>
+        <p class="text-sm font-semibold text-gray-600">PeelAways handles every single one of these. &nbsp;
+          <a href="https://peelaways.com/products/peelaways" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold hover:underline" data-track="mess-cta">Shop now →</a>
         </p>
       </div>
     </div>
@@ -413,127 +662,95 @@
     </div>
     <div class="grid md:grid-cols-3 gap-8">
       <div class="fu text-center">
-        <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg text-5xl bg-white border-2" style="border-color:#BFDBFE">🛏️</div>
-        <div class="step-dot mx-auto mb-3" style="background:#0F2D5E">1</div>
+        <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg text-5xl bg-white border-2" style="border-color:#BFDBFE" aria-hidden="true">🛏️</div>
+        <div class="step-dot mx-auto mb-3" style="background:#0F2D5E" aria-hidden="true">1</div>
         <h3 class="text-xl font-black mb-2">Fit It Once</h3>
-        <p class="text-gray-500 text-sm leading-relaxed">Goes on like any fitted sheet — 360° elastic, deep pockets. All layers stack in one. <strong>One install, up to 7 uses.</strong></p>
+        <p class="text-gray-600 text-sm leading-relaxed">360° elastic, deep pockets. Fits every standard mattress. All 5–7 layers go on together in one step. <strong>One install, weeks of coverage.</strong></p>
       </div>
       <div class="fu text-center" style="transition-delay:.15s">
-        <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg text-5xl bg-white border-2" style="border-color:#93C5FD">🫳</div>
-        <div class="step-dot mx-auto mb-3" style="background:#1E6EC8">2</div>
+        <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg text-5xl bg-white border-2" style="border-color:#93C5FD" aria-hidden="true">🫳</div>
+        <div class="step-dot mx-auto mb-3" style="background:#1E6EC8" aria-hidden="true">2</div>
         <h3 class="text-xl font-black mb-2">Peel the Top</h3>
-        <p class="text-gray-500 text-sm leading-relaxed">Grab the corner. Peel off the soiled layer. <strong>The one underneath is completely dry.</strong> Verified by every single customer review.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Grab the corner tab. Peel the soiled layer off. The one underneath is <strong>completely dry</strong> — every single time. Takes about 60 seconds.</p>
       </div>
       <div class="fu text-center" style="transition-delay:.3s">
-        <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg text-5xl bg-white border-2" style="border-color:#60A5FA">🗑️</div>
-        <div class="step-dot mx-auto mb-3" style="background:#4FA3E8">3</div>
+        <div class="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-5 shadow-lg text-5xl bg-white border-2" style="border-color:#60A5FA" aria-hidden="true">🗑️</div>
+        <div class="step-dot mx-auto mb-3" style="background:#4FA3E8" aria-hidden="true">3</div>
         <h3 class="text-xl font-black mb-2">Toss &amp; Sleep</h3>
-        <p class="text-gray-500 text-sm leading-relaxed">Throw it away. Back to sleep in under <strong>60 seconds.</strong> No laundry. No remaking. No 3am suffering.</p>
+        <p class="text-gray-600 text-sm leading-relaxed">Throw it away. Back to sleep. Repeat up to <strong>5–7 times</strong> before swapping the whole set. No laundry. No midnight suffering.</p>
       </div>
     </div>
     <div class="text-center mt-14 fu">
       <div class="inline-flex items-center gap-3 px-7 py-4 rounded-2xl text-lg font-black"
         style="background:#EBF5FF;color:#0F2D5E;border:2px solid #BFDBFE">
-        Peel. Toss. Back to bed. 😴
+        <span aria-hidden="true">😴</span> Peel. Toss. Back to bed.
       </div>
     </div>
   </div>
 </section>
 
-<!-- ======= SPECS ======= -->
+<!-- ======= SPECS + SIZES ======= -->
 <section id="specs" class="py-20" style="background:linear-gradient(160deg,#F0F7FF,#DBEAFE)">
   <div class="max-w-5xl mx-auto px-6">
     <div class="text-center mb-14 fu">
-      <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">What You're Actually Getting</span>
+      <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">What You're Getting</span>
       <h2 class="text-4xl font-black mt-2 text-gray-900">Built to Handle Real Life</h2>
     </div>
 
     <div class="grid md:grid-cols-2 gap-8 mb-12">
-      <!-- Materials -->
       <div class="fu bg-white rounded-2xl p-7 shadow-sm border border-blue-100">
-        <h3 class="text-lg font-black mb-4 text-gray-900">🧵 Materials</h3>
-        <ul class="space-y-3 text-sm">
-          <li class="flex items-start gap-3">
-            <span class="text-blue-500 font-black mt-0.5">→</span>
-            <span><strong>55% Rayon / 45% Polyester</strong> blend — soft, breathable, quiet</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-blue-500 font-black mt-0.5">→</span>
-            <span><strong>Bamboo + Rayon + Polyester</strong> fiber blend for strength and absorption</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-blue-500 font-black mt-0.5">→</span>
-            <span><strong>HydroShield™ 100% waterproof</strong> layer between each sheet</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-green-500 font-black mt-0.5">✓</span>
-            <span class="text-green-700 font-semibold">No Vinyl · No PVC · No Phthalates · No Fire Retardants</span>
-          </li>
+        <h3 class="text-lg font-black mb-4 text-gray-900"><span aria-hidden="true">🧵</span> Materials</h3>
+        <ul class="space-y-3 text-sm" role="list">
+          <li class="flex items-start gap-3"><span class="text-blue-500 font-black mt-0.5" aria-hidden="true">→</span><span><strong>55% Rayon / 45% Polyester</strong> — soft, breathable, quiet (no crinkle)</span></li>
+          <li class="flex items-start gap-3"><span class="text-blue-500 font-black mt-0.5" aria-hidden="true">→</span><span><strong>Bamboo + Rayon + Polyester</strong> fiber blend for strength, absorption, and softness</span></li>
+          <li class="flex items-start gap-3"><span class="text-blue-500 font-black mt-0.5" aria-hidden="true">→</span><span><strong>HydroShield™ 100% waterproof</strong> layer between each sheet — holds up to 1 liter</span></li>
+          <li class="flex items-start gap-3"><span class="text-green-500 font-black mt-0.5" aria-hidden="true">✓</span><span class="text-green-700 font-semibold">No Vinyl · No PVC · No Phthalates · No Fire Retardants</span></li>
         </ul>
       </div>
-      <!-- Performance -->
       <div class="fu bg-white rounded-2xl p-7 shadow-sm border border-blue-100" style="transition-delay:.1s">
-        <h3 class="text-lg font-black mb-4 text-gray-900">⚡ Performance</h3>
-        <ul class="space-y-3 text-sm">
-          <li class="flex items-start gap-3">
-            <span class="text-blue-500 font-black mt-0.5">→</span>
-            <span>Each layer holds <strong>up to 1 liter</strong> of liquid without breakthrough</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-blue-500 font-black mt-0.5">→</span>
-            <span>Each layer lasts <strong>7–10 nights</strong> if no accident occurs</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-blue-500 font-black mt-0.5">→</span>
-            <span><strong>Under 60 seconds</strong> to peel and reveal a fresh layer</span>
-          </li>
-          <li class="flex items-start gap-3">
-            <span class="text-blue-500 font-black mt-0.5">→</span>
-            <span><strong>360° elastic</strong> deep-pocket fit — stays put all night</span>
-          </li>
+        <h3 class="text-lg font-black mb-4 text-gray-900"><span aria-hidden="true">⚡</span> Performance</h3>
+        <ul class="space-y-3 text-sm" role="list">
+          <li class="flex items-start gap-3"><span class="text-blue-500 font-black mt-0.5" aria-hidden="true">→</span><span>Holds <strong>up to 1 liter</strong> of liquid without breakthrough</span></li>
+          <li class="flex items-start gap-3"><span class="text-blue-500 font-black mt-0.5" aria-hidden="true">→</span><span>Each layer lasts <strong>7–10 nights</strong> when not soiled</span></li>
+          <li class="flex items-start gap-3"><span class="text-blue-500 font-black mt-0.5" aria-hidden="true">→</span><span><strong>Under 60 seconds</strong> to peel and reveal a fresh layer</span></li>
+          <li class="flex items-start gap-3"><span class="text-blue-500 font-black mt-0.5" aria-hidden="true">→</span><span><strong>360° elastic</strong> deep pockets — stays put all night, no shifting</span></li>
         </ul>
       </div>
     </div>
 
     <!-- Sizes -->
     <div class="fu">
-      <h3 class="text-lg font-black mb-5 text-center text-gray-900">📐 Available in 7 Sizes</h3>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <div class="bg-white rounded-xl p-4 text-center border border-blue-100 shadow-sm hover:border-blue-300 transition-colors cursor-pointer">
-          <p class="font-black text-gray-900">Crib</p>
-          <p class="text-xs text-gray-400 mt-0.5">52" × 28"</p>
+      <h3 class="text-lg font-black mb-5 text-center text-gray-900"><span aria-hidden="true">📐</span> Available in 7 Sizes</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3" role="list">
+        <div class="bg-white rounded-xl p-4 text-center border border-blue-100 shadow-sm hover:border-blue-300 transition-colors" role="listitem">
+          <p class="font-black text-gray-900">Crib</p><p class="text-xs text-gray-500 mt-0.5">52" × 28"</p>
         </div>
-        <div class="bg-white rounded-xl p-4 text-center border border-blue-100 shadow-sm hover:border-blue-300 transition-colors cursor-pointer">
-          <p class="font-black text-gray-900">Cot</p>
-          <p class="text-xs text-gray-400 mt-0.5">75" × 30" · 6" pocket</p>
+        <div class="bg-white rounded-xl p-4 text-center border border-blue-100 shadow-sm hover:border-blue-300 transition-colors" role="listitem">
+          <p class="font-black text-gray-900">Cot</p><p class="text-xs text-gray-500 mt-0.5">75" × 30" · 6" pocket</p>
         </div>
-        <div class="bg-white rounded-xl p-4 text-center border border-blue-100 shadow-sm hover:border-blue-300 transition-colors cursor-pointer">
-          <p class="font-black text-gray-900">Twin</p>
-          <p class="text-xs text-gray-400 mt-0.5">75" × 39" · 6" pocket</p>
+        <div class="bg-white rounded-xl p-4 text-center border border-blue-100 shadow-sm hover:border-blue-300 transition-colors" role="listitem">
+          <p class="font-black text-gray-900">Twin</p><p class="text-xs text-gray-500 mt-0.5">75" × 39" · 6" pocket</p>
         </div>
-        <div class="bg-white rounded-xl p-4 text-center border border-blue-100 shadow-sm hover:border-blue-300 transition-colors cursor-pointer">
+        <div class="bg-white rounded-xl p-4 text-center border border-blue-100 shadow-sm hover:border-blue-300 transition-colors" role="listitem">
           <p class="font-black text-gray-900">Twin XL</p>
-          <p class="text-xs text-gray-400 mt-0.5">80" × 39" · 9" pocket</p>
+          <p class="text-xs text-gray-500 mt-0.5">80" × 39" · 9" pocket</p>
           <p class="text-xs text-blue-600 font-bold mt-1">Hospital beds ✓</p>
         </div>
-        <div class="bg-white rounded-xl p-4 text-center border border-blue-100 shadow-sm hover:border-blue-300 transition-colors cursor-pointer">
-          <p class="font-black text-gray-900">Full</p>
-          <p class="text-xs text-gray-400 mt-0.5">75" × 54" · 12" pocket</p>
+        <div class="bg-white rounded-xl p-4 text-center border border-blue-100 shadow-sm hover:border-blue-300 transition-colors" role="listitem">
+          <p class="font-black text-gray-900">Full</p><p class="text-xs text-gray-500 mt-0.5">75" × 54" · 12" pocket</p>
         </div>
-        <div class="bg-white rounded-xl p-4 text-center border border-blue-300 shadow-md cursor-pointer" style="background:linear-gradient(135deg,#EBF5FF,#DBEAFE)">
-          <p class="font-black text-blue-900">Queen ⭐</p>
-          <p class="text-xs text-blue-600 mt-0.5">80" × 60" · 12" pocket</p>
-          <p class="text-xs text-blue-700 font-bold mt-1">Most Popular</p>
+        <div class="rounded-xl p-4 text-center shadow-md border-2 border-blue-300 relative" style="background:linear-gradient(135deg,#EBF5FF,#DBEAFE)" role="listitem">
+          <span class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-black px-2 py-0.5 rounded-full whitespace-nowrap">Most Popular</span>
+          <p class="font-black text-blue-900">Queen</p><p class="text-xs text-blue-700 mt-0.5">80" × 60" · 12" pocket</p>
         </div>
-        <div class="bg-white rounded-xl p-4 text-center border border-blue-100 shadow-sm hover:border-blue-300 transition-colors cursor-pointer">
-          <p class="font-black text-gray-900">King</p>
-          <p class="text-xs text-gray-400 mt-0.5">80" × 78" · 12" pocket</p>
+        <div class="bg-white rounded-xl p-4 text-center border border-blue-100 shadow-sm hover:border-blue-300 transition-colors" role="listitem">
+          <p class="font-black text-gray-900">King</p><p class="text-xs text-gray-500 mt-0.5">80" × 78" · 12" pocket</p>
         </div>
-        <div class="bg-blue-700 rounded-xl p-4 text-center shadow-sm cursor-pointer">
-          <a href="https://peelaways.com" target="_blank" class="text-white font-black text-sm">
-            Shop All Sizes →
-          </a>
-        </div>
+        <a href="https://peelaways.com/products/peelaways" target="_blank" rel="noopener noreferrer"
+          class="rounded-xl p-4 flex items-center justify-center text-center text-white font-black text-sm transition-all hover:opacity-90"
+          style="background:#0F2D5E" data-track="sizes-cta">
+          Shop All Sizes →
+        </a>
       </div>
     </div>
   </div>
@@ -548,27 +765,27 @@
     </div>
     <div class="grid md:grid-cols-2 gap-6 fu">
       <div class="p-8 rounded-2xl border-2 border-red-100 bg-red-50">
-        <div class="text-5xl mb-4 text-center">😩</div>
+        <div class="text-5xl mb-4 text-center" aria-hidden="true">😩</div>
         <h3 class="text-xl font-black text-gray-900 mb-5 text-center">Without PeelAways</h3>
-        <ul class="space-y-3">
-          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-red-500 font-black text-base">✗</span> Strip entire bed at 3am</li>
-          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-red-500 font-black text-base">✗</span> Run laundry immediately</li>
-          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-red-500 font-black text-base">✗</span> Wait 2+ hours for dry sheets</li>
-          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-red-500 font-black text-base">✗</span> Remake the whole bed, exhausted</li>
-          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-red-500 font-black text-base">✗</span> Repeat multiple times a week</li>
-          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-red-500 font-black text-base">✗</span> 15+ laundry loads per week (some customers)</li>
+        <ul class="space-y-3" role="list">
+          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-red-500 font-black text-base" aria-hidden="true">✗</span> Strip entire bed at 3am</li>
+          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-red-500 font-black text-base" aria-hidden="true">✗</span> Run laundry immediately</li>
+          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-red-500 font-black text-base" aria-hidden="true">✗</span> Wait 2+ hours for dry sheets</li>
+          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-red-500 font-black text-base" aria-hidden="true">✗</span> Remake the whole bed, exhausted</li>
+          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-red-500 font-black text-base" aria-hidden="true">✗</span> Repeat multiple times a week</li>
+          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-red-500 font-black text-base" aria-hidden="true">✗</span> Some customers: 15+ loads/week</li>
         </ul>
       </div>
       <div class="p-8 rounded-2xl border-2 border-green-100 bg-green-50">
-        <div class="text-5xl mb-4 text-center">😴</div>
+        <div class="text-5xl mb-4 text-center" aria-hidden="true">😴</div>
         <h3 class="text-xl font-black text-gray-900 mb-5 text-center">With PeelAways</h3>
-        <ul class="space-y-3">
-          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-green-500 font-black text-base">✓</span> Peel off the top layer</li>
-          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-green-500 font-black text-base">✓</span> Layer underneath is completely dry</li>
-          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-green-500 font-black text-base">✓</span> Back to sleep in 60 seconds</li>
-          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-green-500 font-black text-base">✓</span> No laundry. No remaking. Nothing.</li>
-          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-green-500 font-black text-base">✓</span> Up to 5–7 times before you swap the set</li>
-          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-green-500 font-black text-base">✓</span> 80% less laundry — real customer result</li>
+        <ul class="space-y-3" role="list">
+          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-green-500 font-black text-base" aria-hidden="true">✓</span> Peel off the top layer</li>
+          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-green-500 font-black text-base" aria-hidden="true">✓</span> Layer underneath is completely dry</li>
+          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-green-500 font-black text-base" aria-hidden="true">✓</span> Back to sleep in 60 seconds</li>
+          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-green-500 font-black text-base" aria-hidden="true">✓</span> No laundry. No remaking. Nothing.</li>
+          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-green-500 font-black text-base" aria-hidden="true">✓</span> Up to 5–7 peels per set</li>
+          <li class="flex items-center gap-3 text-sm text-gray-700"><span class="text-green-500 font-black text-base" aria-hidden="true">✓</span> 80% less laundry — real customer result</li>
         </ul>
       </div>
     </div>
@@ -581,38 +798,38 @@
     <div class="text-center mb-14 fu">
       <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Real Customers, Real Life</span>
       <h2 class="text-4xl font-black mt-2 text-gray-900">Who Actually Uses PeelAways</h2>
-      <p class="text-gray-500 mt-2">Based on 1,800+ verified Amazon reviews.</p>
+      <p class="text-gray-600 mt-2">Based on 1,800+ verified Amazon reviews.</p>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
       <div class="sc bg-white p-6 rounded-2xl border-2 border-blue-100 shadow-sm fu">
-        <div class="text-4xl mb-3">👴</div>
+        <div class="text-4xl mb-3" aria-hidden="true">👴</div>
         <h3 class="font-black mb-1 text-gray-900">Elderly Care</h3>
-        <p class="text-sm text-gray-500">"Helping me out with taking care of my 93-year-old mother!" — <em>Eric G., Amazon ★★★★★</em></p>
+        <p class="text-sm text-gray-600">"Helping me out with taking care of my 93-year-old mother!" — <em>Eric G. ★★★★★</em></p>
       </div>
       <div class="sc bg-white p-6 rounded-2xl border-2 border-amber-100 shadow-sm fu" style="transition-delay:.1s">
-        <div class="text-4xl mb-3">👶</div>
+        <div class="text-4xl mb-3" aria-hidden="true">👶</div>
         <h3 class="font-black mb-1 text-gray-900">Potty Training</h3>
-        <p class="text-sm text-gray-500">Nighttime accidents become 60-second fixes instead of 2am laundry runs.</p>
+        <p class="text-sm text-gray-600">Nighttime accidents become 60-second fixes. No laundry at 3am, ever again.</p>
       </div>
       <div class="sc bg-white p-6 rounded-2xl border-2 border-orange-100 shadow-sm fu" style="transition-delay:.2s">
-        <div class="text-4xl mb-3">🐕</div>
+        <div class="text-4xl mb-3" aria-hidden="true">🐕</div>
         <h3 class="font-black mb-1 text-gray-900">Pet Parents</h3>
-        <p class="text-sm text-gray-500">"I ordered these for my Great Dane... they really have a great liquid barrier." — <em>CzechNovots ★★★★★</em></p>
+        <p class="text-sm text-gray-600">"I ordered for my Great Dane... they really have a great liquid barrier." — <em>CzechNovots ★★★★★</em></p>
       </div>
       <div class="sc bg-white p-6 rounded-2xl border-2 border-indigo-100 shadow-sm fu" style="transition-delay:.1s">
-        <div class="text-4xl mb-3">🧠</div>
+        <div class="text-4xl mb-3" aria-hidden="true">🧠</div>
         <h3 class="font-black mb-1 text-gray-900">Memory Care</h3>
-        <p class="text-sm text-gray-500">"Bought PeelAways as a gift for my Dad who has Dementia — his wife says they are a lifesaver." — <em>Roz M. ★★★★★</em></p>
+        <p class="text-sm text-gray-600">"Bought for my Dad who has Dementia. His wife says they are a lifesaver." — <em>Roz M. ★★★★★</em></p>
       </div>
       <div class="sc bg-white p-6 rounded-2xl border-2 border-pink-100 shadow-sm fu" style="transition-delay:.2s">
-        <div class="text-4xl mb-3">💙</div>
+        <div class="text-4xl mb-3" aria-hidden="true">💙</div>
         <h3 class="font-black mb-1 text-gray-900">Special Needs</h3>
-        <p class="text-sm text-gray-500">Soft, breathable, sensory-friendly. Used in memory care facilities nationwide.</p>
+        <p class="text-sm text-gray-600">Soft, breathable, quiet. Used in memory care facilities nationwide. No crinkle noise.</p>
       </div>
       <div class="sc bg-white p-6 rounded-2xl border-2 border-green-100 shadow-sm fu" style="transition-delay:.3s">
-        <div class="text-4xl mb-3">🏥</div>
-        <h3 class="font-black mb-1 text-gray-900">Post-Surgery</h3>
-        <p class="text-sm text-gray-500">Recovery without the laundry burden. Works on hospital beds too (9" pocket Twin XL).</p>
+        <div class="text-4xl mb-3" aria-hidden="true">🏥</div>
+        <h3 class="font-black mb-1 text-gray-900">Post-Surgery &amp; Hospice</h3>
+        <p class="text-sm text-gray-600">Recovery without the laundry burden. Twin XL fits standard hospital beds.</p>
       </div>
     </div>
   </div>
@@ -624,178 +841,230 @@
     <div class="text-center fu">
       <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Verified Customers</span>
       <h2 class="text-4xl font-black mt-2 text-gray-900">What Real People Are Saying</h2>
-      <p class="text-gray-500 mt-2">From Amazon, their website, and independent review sites.</p>
+      <p class="text-gray-600 mt-2">Sourced from Amazon, PeelAways.com, and independent review sites.</p>
     </div>
 
     <!-- Rating breakdown -->
-    <div class="mt-10 max-w-md mx-auto fu">
-      <div class="flex items-center gap-4 mb-1">
+    <div class="mt-10 max-w-md mx-auto fu" aria-label="Rating breakdown">
+      <div class="flex items-center gap-4 mb-4">
         <div class="text-5xl font-black" style="color:#0F2D5E">4.2</div>
         <div>
-          <div class="stars text-2xl">★★★★</div>
-          <p class="text-xs text-gray-400 font-semibold mt-0.5">1,810 Amazon ratings · 276 site reviews</p>
+          <div class="stars text-2xl" aria-label="4.2 out of 5 stars">★★★★</div>
+          <p class="text-xs text-gray-500 font-semibold mt-0.5">1,810 Amazon ratings · 276 site reviews</p>
         </div>
       </div>
-      <div class="space-y-1.5 mt-4">
-        <div class="flex items-center gap-2 text-xs text-gray-500">
+      <div class="space-y-1.5">
+        <div class="flex items-center gap-2 text-xs text-gray-600">
           <span class="w-12 text-right font-bold">5 ★</span>
-          <div class="flex-1 h-2.5 bg-gray-100 rounded-full overflow-hidden">
-            <div class="rating-fill" style="width:72%"></div>
-          </div>
+          <div class="flex-1 h-2.5 bg-gray-100 rounded-full overflow-hidden"><div class="rating-fill" style="width:72%"></div></div>
           <span class="w-8 font-bold text-gray-700">72%</span>
         </div>
-        <div class="flex items-center gap-2 text-xs text-gray-500">
+        <div class="flex items-center gap-2 text-xs text-gray-600">
           <span class="w-12 text-right font-bold">4 ★</span>
-          <div class="flex-1 h-2.5 bg-gray-100 rounded-full overflow-hidden">
-            <div class="rating-fill" style="width:18%"></div>
-          </div>
+          <div class="flex-1 h-2.5 bg-gray-100 rounded-full overflow-hidden"><div class="rating-fill" style="width:18%"></div></div>
           <span class="w-8 font-bold text-gray-700">18%</span>
         </div>
-        <div class="flex items-center gap-2 text-xs text-gray-500">
+        <div class="flex items-center gap-2 text-xs text-gray-600">
           <span class="w-12 text-right font-bold">3 ★</span>
-          <div class="flex-1 h-2.5 bg-gray-100 rounded-full overflow-hidden">
-            <div class="rating-fill" style="width:7%"></div>
-          </div>
+          <div class="flex-1 h-2.5 bg-gray-100 rounded-full overflow-hidden"><div class="rating-fill" style="width:7%"></div></div>
           <span class="w-8 font-bold text-gray-700">7%</span>
         </div>
-        <div class="flex items-center gap-2 text-xs text-gray-500">
+        <div class="flex items-center gap-2 text-xs text-gray-600">
           <span class="w-12 text-right font-bold">2 ★</span>
-          <div class="flex-1 h-2.5 bg-gray-100 rounded-full overflow-hidden">
-            <div class="rating-fill" style="width:2%"></div>
-          </div>
+          <div class="flex-1 h-2.5 bg-gray-100 rounded-full overflow-hidden"><div class="rating-fill" style="width:2%"></div></div>
           <span class="w-8 font-bold text-gray-700">2%</span>
         </div>
-        <div class="flex items-center gap-2 text-xs text-gray-500">
+        <div class="flex items-center gap-2 text-xs text-gray-600">
           <span class="w-12 text-right font-bold">1 ★</span>
-          <div class="flex-1 h-2.5 bg-gray-100 rounded-full overflow-hidden">
-            <div class="rating-fill" style="width:1%"></div>
-          </div>
+          <div class="flex-1 h-2.5 bg-gray-100 rounded-full overflow-hidden"><div class="rating-fill" style="width:1%"></div></div>
           <span class="w-8 font-bold text-gray-700">1%</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Scrolling review carousel -->
-  <div class="overflow-hidden">
-    <div class="testimonial-track">
-      <!-- Card 1 -->
-      <div class="flex-shrink-0 w-96 bg-gray-50 p-6 rounded-2xl border border-gray-100">
-        <div class="stars text-lg mb-2">★★★★★</div>
+  <!-- Scrolling carousel -->
+  <div class="overflow-hidden" aria-label="Customer reviews carousel" role="region">
+    <div class="testimonial-track px-6">
+      <article class="flex-shrink-0 w-96 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+        <div class="stars text-lg mb-2" aria-label="5 out of 5 stars">★★★★★</div>
         <p class="font-bold text-sm text-gray-800 mb-2">"These sheets are a lifesaver."</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">"I've been doing wash every day til I found these. Only once did he get the whole sheet wet — and that was a really long sleep for him. These r awesome."</p>
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#0F2D5E">K</div>
-          <div><p class="font-bold text-xs">Kathy Smith</p><p class="text-xs text-gray-400">Verified Purchase · Amazon</p></div>
-        </div>
-      </div>
-      <!-- Card 2 -->
-      <div class="flex-shrink-0 w-96 bg-blue-50 p-6 rounded-2xl border border-blue-100">
-        <div class="stars text-lg mb-2">★★★★★</div>
+        <p class="text-gray-700 text-sm leading-relaxed mb-4">"I've been doing wash every day til I found these. Only once did he get the whole sheet wet — and that was a really long sleep for him. These r awesome."</p>
+        <footer class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#0F2D5E" aria-hidden="true">K</div>
+          <div><p class="font-bold text-xs">Kathy Smith</p><p class="text-xs text-gray-500">Verified Purchase · Amazon</p></div>
+        </footer>
+      </article>
+      <article class="flex-shrink-0 w-96 bg-blue-50 p-6 rounded-2xl border border-blue-100">
+        <div class="stars text-lg mb-2" aria-label="5 out of 5 stars">★★★★★</div>
         <p class="font-bold text-sm text-gray-800 mb-2">"Essential as a mom and caregiver"</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">"As a mom and a caregiver, these sheets have been a great addition to make my day easier. Quicker bed changes and less laundry. WIN."</p>
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#1E6EC8">B</div>
-          <div><p class="font-bold text-xs">Brooklyn Shields · Indianapolis</p><p class="text-xs text-gray-400">Verified Purchase · PeelAways.com</p></div>
-        </div>
-      </div>
-      <!-- Card 3 -->
-      <div class="flex-shrink-0 w-96 bg-gray-50 p-6 rounded-2xl border border-gray-100">
-        <div class="stars text-lg mb-2">★★★★★</div>
+        <p class="text-gray-700 text-sm leading-relaxed mb-4">"As a mom and a caregiver, these sheets have been a great addition to make my day easier. Quicker bed changes and less laundry. WIN."</p>
+        <footer class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#1E6EC8" aria-hidden="true">B</div>
+          <div><p class="font-bold text-xs">Brooklyn Shields · Indianapolis</p><p class="text-xs text-gray-500">Verified Purchase · PeelAways.com</p></div>
+        </footer>
+      </article>
+      <article class="flex-shrink-0 w-96 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+        <div class="stars text-lg mb-2" aria-label="5 out of 5 stars">★★★★★</div>
         <p class="font-bold text-sm text-gray-800 mb-2">"EVERYTHING IS BETTER DISPOSABLE!"</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">"MORE COMFORTABLE THAN REGULAR SHEETS. COST EFFECTIVE AND SAVES TIME... I LOVE THEM!"</p>
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#0F2D5E">T</div>
-          <div><p class="font-bold text-xs">Tricia Grover · Lawrenceville</p><p class="text-xs text-gray-400">Verified Purchase · PeelAways.com</p></div>
-        </div>
-      </div>
-      <!-- Card 4 -->
-      <div class="flex-shrink-0 w-96 bg-blue-50 p-6 rounded-2xl border border-blue-100">
-        <div class="stars text-lg mb-2">★★★★★</div>
+        <p class="text-gray-700 text-sm leading-relaxed mb-4">"MORE COMFORTABLE THAN REGULAR SHEETS. COST EFFECTIVE AND SAVES TIME. I LOVE THEM!"</p>
+        <footer class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#0F2D5E" aria-hidden="true">T</div>
+          <div><p class="font-bold text-xs">Tricia Grover · Lawrenceville</p><p class="text-xs text-gray-500">Verified Purchase · PeelAways.com</p></div>
+        </footer>
+      </article>
+      <article class="flex-shrink-0 w-96 bg-blue-50 p-6 rounded-2xl border border-blue-100">
+        <div class="stars text-lg mb-2" aria-label="5 out of 5 stars">★★★★★</div>
         <p class="font-bold text-sm text-gray-800 mb-2">"PeelAways have literally been a godsend."</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">"I placed them on my almost-95 year old mom's bed and they've been such a big help. Her caregivers love how easy they are to use."</p>
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#1E6EC8">C</div>
-          <div><p class="font-bold text-xs">Christopher D.</p><p class="text-xs text-gray-400">Verified Purchase · Amazon</p></div>
-        </div>
-      </div>
-      <!-- Card 5 -->
-      <div class="flex-shrink-0 w-96 bg-gray-50 p-6 rounded-2xl border border-gray-100">
-        <div class="stars text-lg mb-2">★★★★★</div>
+        <p class="text-gray-700 text-sm leading-relaxed mb-4">"I placed them on my almost-95 year old mom's bed and they've been such a big help. Her caregivers love how easy they are to use."</p>
+        <footer class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#1E6EC8" aria-hidden="true">C</div>
+          <div><p class="font-bold text-xs">Christopher D.</p><p class="text-xs text-gray-500">Verified Purchase · Amazon</p></div>
+        </footer>
+      </article>
+      <article class="flex-shrink-0 w-96 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+        <div class="stars text-lg mb-2" aria-label="5 out of 5 stars">★★★★★</div>
         <p class="font-bold text-sm text-gray-800 mb-2">"The layer underneath was completely dry!"</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">"When the top layer was wet, I easily tore it off — and the layer underneath was completely dry! Saving laundry 90% of the time is absolutely worth it."</p>
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#0F2D5E">S</div>
-          <div><p class="font-bold text-xs">Shiri R. · WonderBaby.org</p><p class="text-xs text-gray-400">Independent Review · Subscribed after testing</p></div>
-        </div>
-      </div>
-      <!-- Card 6 -->
-      <div class="flex-shrink-0 w-96 bg-amber-50 p-6 rounded-2xl border border-amber-100">
-        <div class="stars text-lg mb-2">★★★★★</div>
+        <p class="text-gray-700 text-sm leading-relaxed mb-4">"I was skeptical — bed sheets you throw away? Then I tested it. The top layer was wet. I tore it off. The one underneath was completely dry. I subscribed immediately."</p>
+        <footer class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#0F2D5E" aria-hidden="true">S</div>
+          <div><p class="font-bold text-xs">Shiri R. · WonderBaby.org</p><p class="text-xs text-gray-500">Independent Review · Now subscribed monthly</p></div>
+        </footer>
+      </article>
+      <article class="flex-shrink-0 w-96 bg-amber-50 p-6 rounded-2xl border border-amber-100">
+        <div class="stars text-lg mb-2" aria-label="5 out of 5 stars">★★★★★</div>
         <p class="font-bold text-sm text-gray-800 mb-2">"I ordered these for my Great Dane"</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">"He was elderly and having some bowel issues and these made cleaning up a breeze — they really have a great liquid barrier."</p>
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#0F2D5E">C</div>
-          <div><p class="font-bold text-xs">CzechNovots</p><p class="text-xs text-gray-400">Verified Purchase · PeelAways.com</p></div>
-        </div>
-      </div>
-      <!-- Card 7 -->
-      <div class="flex-shrink-0 w-96 bg-gray-50 p-6 rounded-2xl border border-gray-100">
-        <div class="stars text-lg mb-2">★★★★★</div>
+        <p class="text-gray-700 text-sm leading-relaxed mb-4">"He was elderly and having some bowel issues and these made cleaning up a breeze — they really have a great liquid barrier."</p>
+        <footer class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#0F2D5E" aria-hidden="true">C</div>
+          <div><p class="font-bold text-xs">CzechNovots</p><p class="text-xs text-gray-500">Verified Purchase · PeelAways.com</p></div>
+        </footer>
+      </article>
+      <article class="flex-shrink-0 w-96 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+        <div class="stars text-lg mb-2" aria-label="5 out of 5 stars">★★★★★</div>
         <p class="font-bold text-sm text-gray-800 mb-2">"PeelAway sheets make life so much easier"</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">"PeelAway sheets make life so much easier for patient care and caregivers. Absolutely a must have item."</p>
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#1E6EC8">S</div>
-          <div><p class="font-bold text-xs">Sharon Aude</p><p class="text-xs text-gray-400">Verified Purchase · PeelAways.com</p></div>
-        </div>
-      </div>
-      <!-- Card 8 -->
-      <div class="flex-shrink-0 w-96 bg-blue-50 p-6 rounded-2xl border border-blue-100">
-        <div class="stars text-lg mb-2">★★★★★</div>
-        <p class="font-bold text-sm text-gray-800 mb-2">"A lifesaver — his wife can't imagine without them"</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">"Bought PeelAways as a gift for my Dad who has Dementia. His wife says they are a lifesaver and make his bed care so much easier."</p>
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#0F2D5E">R</div>
-          <div><p class="font-bold text-xs">Roz Mabson · Goodyear, AZ</p><p class="text-xs text-gray-400">Verified Purchase · PeelAways.com</p></div>
-        </div>
-      </div>
-      <!-- Duplicate cards for seamless loop -->
-      <div class="flex-shrink-0 w-96 bg-gray-50 p-6 rounded-2xl border border-gray-100">
+        <p class="text-gray-700 text-sm leading-relaxed mb-4">"PeelAway sheets make life so much easier for patient care and caregivers. Absolutely a must have item."</p>
+        <footer class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#1E6EC8" aria-hidden="true">S</div>
+          <div><p class="font-bold text-xs">Sharon Aude</p><p class="text-xs text-gray-500">Verified Purchase · PeelAways.com</p></div>
+        </footer>
+      </article>
+      <article class="flex-shrink-0 w-96 bg-blue-50 p-6 rounded-2xl border border-blue-100">
+        <div class="stars text-lg mb-2" aria-label="5 out of 5 stars">★★★★★</div>
+        <p class="font-bold text-sm text-gray-800 mb-2">"A lifesaver for dementia care"</p>
+        <p class="text-gray-700 text-sm leading-relaxed mb-4">"Bought PeelAways as a gift for my Dad who has Dementia. His wife says they are a lifesaver and make his bed care so much easier."</p>
+        <footer class="flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#0F2D5E" aria-hidden="true">R</div>
+          <div><p class="font-bold text-xs">Roz Mabson · Goodyear, AZ</p><p class="text-xs text-gray-500">Verified Purchase · PeelAways.com</p></div>
+        </footer>
+      </article>
+      <!-- Duplicates for infinite loop -->
+      <article class="flex-shrink-0 w-96 bg-gray-50 p-6 rounded-2xl border border-gray-100" aria-hidden="true">
         <div class="stars text-lg mb-2">★★★★★</div>
         <p class="font-bold text-sm text-gray-800 mb-2">"These sheets are a lifesaver."</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">"I've been doing wash every day til I found these. Only once did he get the whole sheet wet — and that was a really long sleep for him. These r awesome."</p>
-        <div class="flex items-center gap-2">
+        <p class="text-gray-700 text-sm leading-relaxed mb-4">"I've been doing wash every day til I found these. Only once did he get the whole sheet wet. These r awesome."</p>
+        <footer class="flex items-center gap-2">
           <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#0F2D5E">K</div>
-          <div><p class="font-bold text-xs">Kathy Smith</p><p class="text-xs text-gray-400">Verified Purchase · Amazon</p></div>
-        </div>
-      </div>
-      <div class="flex-shrink-0 w-96 bg-blue-50 p-6 rounded-2xl border border-blue-100">
+          <div><p class="font-bold text-xs">Kathy Smith</p><p class="text-xs text-gray-500">Verified Purchase · Amazon</p></div>
+        </footer>
+      </article>
+      <article class="flex-shrink-0 w-96 bg-blue-50 p-6 rounded-2xl border border-blue-100" aria-hidden="true">
         <div class="stars text-lg mb-2">★★★★★</div>
         <p class="font-bold text-sm text-gray-800 mb-2">"Essential as a mom and caregiver"</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">"As a mom and a caregiver, these sheets have been a great addition to make my day easier. Quicker bed changes and less laundry. WIN."</p>
-        <div class="flex items-center gap-2">
+        <p class="text-gray-700 text-sm leading-relaxed mb-4">"Quicker bed changes and less laundry. WIN."</p>
+        <footer class="flex items-center gap-2">
           <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#1E6EC8">B</div>
-          <div><p class="font-bold text-xs">Brooklyn Shields · Indianapolis</p><p class="text-xs text-gray-400">Verified Purchase · PeelAways.com</p></div>
-        </div>
-      </div>
-      <div class="flex-shrink-0 w-96 bg-gray-50 p-6 rounded-2xl border border-gray-100">
-        <div class="stars text-lg mb-2">★★★★★</div>
-        <p class="font-bold text-sm text-gray-800 mb-2">"PeelAways have literally been a godsend."</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">"I placed them on my almost-95 year old mom's bed and they've been such a big help. Her caregivers love how easy they are to use."</p>
-        <div class="flex items-center gap-2">
-          <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#1E6EC8">C</div>
-          <div><p class="font-bold text-xs">Christopher D.</p><p class="text-xs text-gray-400">Verified Purchase · Amazon</p></div>
-        </div>
-      </div>
-      <div class="flex-shrink-0 w-96 bg-amber-50 p-6 rounded-2xl border border-amber-100">
+          <div><p class="font-bold text-xs">Brooklyn Shields</p><p class="text-xs text-gray-500">Verified Purchase · PeelAways.com</p></div>
+        </footer>
+      </article>
+      <article class="flex-shrink-0 w-96 bg-amber-50 p-6 rounded-2xl border border-amber-100" aria-hidden="true">
         <div class="stars text-lg mb-2">★★★★★</div>
         <p class="font-bold text-sm text-gray-800 mb-2">"I ordered these for my Great Dane"</p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-4">"He was elderly and having some bowel issues and these made cleaning up a breeze — they really have a great liquid barrier."</p>
-        <div class="flex items-center gap-2">
+        <p class="text-gray-700 text-sm leading-relaxed mb-4">"They really have a great liquid barrier."</p>
+        <footer class="flex items-center gap-2">
           <div class="w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-black" style="background:#0F2D5E">C</div>
-          <div><p class="font-bold text-xs">CzechNovots</p><p class="text-xs text-gray-400">Verified Purchase · PeelAways.com</p></div>
+          <div><p class="font-bold text-xs">CzechNovots</p><p class="text-xs text-gray-500">Verified Purchase · PeelAways.com</p></div>
+        </footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======= FAQ ======= -->
+<section id="faq" class="py-20 bg-white">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-12 fu">
+      <span class="text-blue-600 font-bold text-xs uppercase tracking-widest">Got Questions</span>
+      <h2 class="text-4xl font-black mt-2 text-gray-900">Frequently Asked Questions</h2>
+    </div>
+    <div class="space-y-3 fu" role="list">
+
+      <div class="faq-item rounded-2xl border border-gray-100 bg-gray-50 overflow-hidden" role="listitem">
+        <button class="w-full flex items-center justify-between px-6 py-5 text-left font-black text-gray-900 hover:text-blue-700 transition-colors"
+          onclick="toggleFaq(this)" aria-expanded="false">
+          <span>How many layers does PeelAways have?</span>
+          <span class="faq-icon text-xl text-blue-500 flex-shrink-0 ml-4" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer px-6 text-sm text-gray-700 leading-relaxed">
+          <p class="pb-5">PeelAways comes with <strong>5–7 layers</strong> depending on the size you order. Each layer lasts <strong>7–10 nights</strong> when no accident occurs — meaning one set can give you up to <strong>70 nights of clean sheets</strong>. When a mess happens, simply peel the top layer and you're back to a fresh sheet in 60 seconds.</p>
         </div>
       </div>
+
+      <div class="faq-item rounded-2xl border border-gray-100 bg-gray-50 overflow-hidden" role="listitem">
+        <button class="w-full flex items-center justify-between px-6 py-5 text-left font-black text-gray-900 hover:text-blue-700 transition-colors"
+          onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Are PeelAways 100% waterproof?</span>
+          <span class="faq-icon text-xl text-blue-500 flex-shrink-0 ml-4" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer px-6 text-sm text-gray-700 leading-relaxed">
+          <p class="pb-5">Yes. Each layer features <strong>HydroShield™ waterproof protection</strong> and can hold up to 1 liter of liquid without breakthrough. Your mattress stays completely dry no matter what happens on the surface.</p>
+        </div>
+      </div>
+
+      <div class="faq-item rounded-2xl border border-gray-100 bg-gray-50 overflow-hidden" role="listitem">
+        <button class="w-full flex items-center justify-between px-6 py-5 text-left font-black text-gray-900 hover:text-blue-700 transition-colors"
+          onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Do they make a crinkling noise like plastic covers?</span>
+          <span class="faq-icon text-xl text-blue-500 flex-shrink-0 ml-4" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer px-6 text-sm text-gray-700 leading-relaxed">
+          <p class="pb-5">No — and this is one of the things customers love most. PeelAways are made from a <strong>bamboo, rayon, and polyester blend</strong> that's soft, quiet, and breathable. Multiple reviewers describe them as more comfortable than their regular fitted sheets. No crinkle, no rustling, no sweating.</p>
+        </div>
+      </div>
+
+      <div class="faq-item rounded-2xl border border-gray-100 bg-gray-50 overflow-hidden" role="listitem">
+        <button class="w-full flex items-center justify-between px-6 py-5 text-left font-black text-gray-900 hover:text-blue-700 transition-colors"
+          onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Will they stay in place all night?</span>
+          <span class="faq-icon text-xl text-blue-500 flex-shrink-0 ml-4" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer px-6 text-sm text-gray-700 leading-relaxed">
+          <p class="pb-5">PeelAways use <strong>360° elastic with deep pockets</strong> (6", 9", or 12" depending on size) to stay firmly in place. Some very active sleepers have used mattress sheet straps for extra security. Choose the correct pocket depth for your mattress thickness.</p>
+        </div>
+      </div>
+
+      <div class="faq-item rounded-2xl border border-gray-100 bg-gray-50 overflow-hidden" role="listitem">
+        <button class="w-full flex items-center justify-between px-6 py-5 text-left font-black text-gray-900 hover:text-blue-700 transition-colors"
+          onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Are PeelAways safe and chemical-free?</span>
+          <span class="faq-icon text-xl text-blue-500 flex-shrink-0 ml-4" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer px-6 text-sm text-gray-700 leading-relaxed">
+          <p class="pb-5">Yes. PeelAways contain <strong>no Vinyl, no PVC, no Phthalates, and no fire retardants</strong>. They are breathable, odorless, and completely free from harsh chemicals — safe for children, elderly, and sensitive skin.</p>
+        </div>
+      </div>
+
+      <div class="faq-item rounded-2xl border border-gray-100 bg-gray-50 overflow-hidden" role="listitem">
+        <button class="w-full flex items-center justify-between px-6 py-5 text-left font-black text-gray-900 hover:text-blue-700 transition-colors"
+          onclick="toggleFaq(this)" aria-expanded="false">
+          <span>Is disposable wasteful? What about sustainability?</span>
+          <span class="faq-icon text-xl text-blue-500 flex-shrink-0 ml-4" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer px-6 text-sm text-gray-700 leading-relaxed">
+          <p class="pb-5">It's a fair question. Consider the other side of the math: every traditional sheet change uses water, electricity, detergent, and dryer energy — often daily. PeelAways eliminate <strong>80% of that laundry</strong> for most customers, which significantly reduces water and energy consumption. One set covering 70 nights also means far less material per sleep event than washing a cotton sheet set repeatedly.</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -803,23 +1072,24 @@
 <!-- ======= FINAL CTA ======= -->
 <section class="py-28 text-center" style="background:linear-gradient(160deg,#EBF5FF 0%,#DBEAFE 50%,#C3DFFB 100%)">
   <div class="max-w-2xl mx-auto px-6 fu">
-    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold mb-6 text-white shark-badge">
-      🦈 As Seen on Shark Tank
-    </div>
+    <span class="shark-badge inline-flex items-center gap-1.5 text-white text-xs font-bold px-4 py-2 rounded-full mb-6">
+      <span aria-hidden="true">🦈</span> As Seen on Shark Tank
+    </span>
     <h2 class="text-5xl font-black text-gray-900 mb-5">
       Life's Too Short to<br/><span class="gt">Fight Your Fitted Sheets.</span>
     </h2>
-    <p class="text-xl text-gray-500 mb-3">Five to seven layers. One set. Zero midnight laundry runs.</p>
-    <p class="text-sm text-gray-400 mb-10">Bamboo blend. HydroShield waterproofing. No PVC. No vinyl. No phthalates.</p>
-    <a href="https://peelaways.com" target="_blank"
+    <p class="text-xl text-gray-600 mb-2">Five to seven layers. One set. Up to 70 nights of clean sheets.</p>
+    <p class="text-sm text-gray-500 mb-10">HydroShield waterproofing · Bamboo blend · No PVC · No vinyl · No phthalates.</p>
+    <a href="https://peelaways.com/products/peelaways" target="_blank" rel="noopener noreferrer"
       class="cta-pulse inline-block px-14 py-5 rounded-full text-xl font-black text-white mb-6"
-      style="background:linear-gradient(135deg,#0F2D5E,#1E6EC8)">
+      style="background:linear-gradient(135deg,#0F2D5E,#1E6EC8)"
+      data-track="footer-cta">
       Shop PeelAways — From $30.99 →
     </a>
-    <div class="flex flex-wrap justify-center gap-4 text-sm font-semibold text-gray-500">
-      <span class="flex items-center gap-1.5">🛡️ 30-Day Money-Back Guarantee</span>
-      <span class="flex items-center gap-1.5">📦 Subscribe &amp; Save 15%</span>
-      <span class="flex items-center gap-1.5">🚚 Free shipping on $50+</span>
+    <div class="flex flex-wrap justify-center gap-5 text-sm font-semibold text-gray-600">
+      <span><span aria-hidden="true">🛡️</span> 30-Day Money-Back Guarantee</span>
+      <span><span aria-hidden="true">📦</span> Subscribe &amp; Save 15%</span>
+      <span><span aria-hidden="true">🚚</span> Free shipping on $50+</span>
     </div>
   </div>
 </section>
@@ -828,31 +1098,32 @@
 <footer class="py-10 border-t border-gray-100 bg-white">
   <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
     <div class="flex items-center gap-2">
-      <svg width="20" height="20" viewBox="0 0 28 28" fill="none">
+      <svg width="20" height="20" viewBox="0 0 28 28" fill="none" role="img" aria-hidden="true">
         <rect x="2" y="8" width="24" height="14" rx="3" fill="#4FA3E8" opacity=".45"/>
         <rect x="2" y="5" width="24" height="14" rx="3" fill="#1E6EC8" opacity=".65"/>
         <rect x="2" y="2" width="24" height="14" rx="3" fill="#0F2D5E"/>
       </svg>
-      <span class="font-black text-sm text-gray-900">PeelAways<sup class="text-xs text-gray-400">®</sup></span>
+      <span class="font-black text-sm text-gray-900">PeelAways<sup class="text-xs text-gray-400" aria-hidden="true">®</sup></span>
     </div>
-    <p class="text-xs text-gray-400 text-center">© 2026 PeelAways. Reviews sourced from Amazon and PeelAways.com. Go back to bed.</p>
-    <a href="https://peelaways.com" target="_blank" class="text-sm font-bold text-blue-600 hover:underline">peelaways.com →</a>
+    <p class="text-xs text-gray-400 text-center">© 2026 PeelAways. Reviews sourced from Amazon &amp; PeelAways.com. Go back to bed.</p>
+    <a href="https://peelaways.com" target="_blank" rel="noopener noreferrer" class="text-sm font-bold text-blue-600 hover:underline">peelaways.com →</a>
   </div>
 </footer>
 
 <!-- ======= JS ======= -->
 <script>
-  const observer = new IntersectionObserver(entries => {
+  /* --- Scroll fade-up --- */
+  const fuObserver = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); });
   }, { threshold: 0.08 });
-  document.querySelectorAll('.fu').forEach(el => observer.observe(el));
+  document.querySelectorAll('.fu').forEach(el => fuObserver.observe(el));
 
+  /* --- Mess-o-meter bars --- */
   const barObs = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         e.target.querySelectorAll('.fill-bar').forEach(b => {
-          const pct = getComputedStyle(b).getPropertyValue('--pct').trim();
-          b.style.width = pct;
+          b.style.width = getComputedStyle(b).getPropertyValue('--pct').trim();
         });
         barObs.unobserve(e.target);
       }
@@ -860,34 +1131,88 @@
   }, { threshold: 0.2 });
   document.querySelectorAll('.mess-row').forEach(s => barObs.observe(s));
 
+  /* --- Layer peel --- */
   let peeled = 0;
   function peelIt(el) {
+    if (el.classList.contains('gone')) return;
     el.classList.add('gone');
+    el.setAttribute('aria-label', 'Layer peeled away');
     peeled++;
     confettiBurst(el);
-    if (peeled >= 5) {
-      setTimeout(() => document.getElementById('all-peeled').classList.remove('hidden'), 500);
-    }
+    if (peeled >= 5) setTimeout(() => {
+      const done = document.getElementById('all-peeled');
+      done.classList.remove('hidden');
+    }, 500);
+    track('peel_layer', { layer: peeled });
+  }
+
+  function handlePeelKey(e, el) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); peelIt(el); }
   }
 
   function resetLayers() {
-    document.querySelectorAll('.peel-layer').forEach(el => el.classList.remove('gone'));
+    document.querySelectorAll('.peel-layer').forEach(el => {
+      el.classList.remove('gone');
+      el.setAttribute('aria-label', el.getAttribute('aria-label').replace('peeled away', 'Click to peel.'));
+    });
     document.getElementById('all-peeled').classList.add('hidden');
     peeled = 0;
   }
 
+  /* --- Confetti --- */
   function confettiBurst(el) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const colors = ['#0F2D5E','#1E6EC8','#4FA3E8','#FCD34D','#34D399','#F87171'];
     const rect = el.getBoundingClientRect();
     for (let i = 0; i < 14; i++) {
       const p = document.createElement('div');
       p.className = 'confetti-particle';
-      p.style.cssText = `left:${rect.left+rect.width/2}px;top:${rect.top+rect.height/2}px;background:${colors[Math.floor(Math.random()*colors.length)]};--tx:${(Math.random()-.5)*160}px;--ty:${-(Math.random()*100+40)}px;--rot:${Math.random()*360}deg;--dur:${0.6+Math.random()*.6}s;position:fixed;z-index:9999;`;
+      p.setAttribute('aria-hidden', 'true');
+      p.style.cssText = `left:${rect.left+rect.width/2}px;top:${rect.top+rect.height/2}px;background:${colors[Math.floor(Math.random()*colors.length)]};--tx:${(Math.random()-.5)*160}px;--ty:${-(Math.random()*100+40)}px;--rot:${Math.random()*360}deg;--dur:${0.6+Math.random()*.6}s;`;
       document.body.appendChild(p);
       setTimeout(() => p.remove(), 1300);
     }
   }
 
+  /* --- FAQ accordion --- */
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const answer = item.querySelector('.faq-answer');
+    const isOpen = item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-answer').classList.remove('open');
+      i.querySelector('button').setAttribute('aria-expanded', 'false');
+    });
+    // Open this one if it was closed
+    if (!isOpen) {
+      item.classList.add('open');
+      answer.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  /* --- Sticky buy bar --- */
+  const stickyBar = document.getElementById('sticky-bar');
+  const heroSection = document.querySelector('section');
+  const stickyObs = new IntersectionObserver(([e]) => {
+    stickyBar.classList.toggle('visible', !e.isIntersecting);
+  }, { threshold: 0 });
+  stickyObs.observe(heroSection);
+
+  /* --- CTA click tracking (replace with GA4/pixel events) --- */
+  function track(event, data) {
+    // Placeholder — wire up to GA4: gtag('event', event, data)
+    // or Meta Pixel: fbq('track', event, data)
+    if (window.va) window.va('event', { name: event, ...data });
+  }
+
+  document.querySelectorAll('[data-track]').forEach(el => {
+    el.addEventListener('click', () => track('cta_click', { position: el.dataset.track }));
+  });
+
+  /* --- Smooth scroll --- */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const t = document.querySelector(a.getAttribute('href'));
